@@ -1,0 +1,13 @@
+#!/bin/bash
+
+alias ll="ls -laF"
+alias vi="vim"
+
+if [[ -z "${SSH_CONNECTION}" ]]; then
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+
+# starship terminal prompt
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+eval "$(starship init bash)"
+
