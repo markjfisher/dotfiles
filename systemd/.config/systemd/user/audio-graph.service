@@ -1,0 +1,13 @@
+[Unit]
+Description=audio-graph service
+After=graphical-session.target
+
+[Service]
+User=markf
+ExecStart=/home/.local/bin/start-audio-graph.sh
+ExecStop=/home/.local/bin/stop-audio-graph.sh
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
