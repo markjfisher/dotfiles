@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Carla-Patchbay -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>Carla-Patchbay</Name>
+   <Label>carlapatchbay</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Gain</Name>
+    <Value>3.20588231086731</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Apply Left</Name>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Apply Right</Name>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/chunk</Type>
+    <Key>State</Key>
+    <Value>
+&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;!DOCTYPE CARLA-PROJECT&gt;
+&lt;CARLA-PROJECT VERSION=&apos;2.5&apos;&gt;
+ &lt;EngineSettings&gt;
+  &lt;ForceStereo&gt;false&lt;/ForceStereo&gt;
+  &lt;PreferPluginBridges&gt;false&lt;/PreferPluginBridges&gt;
+  &lt;PreferUiBridges&gt;true&lt;/PreferUiBridges&gt;
+  &lt;UIsAlwaysOnTop&gt;false&lt;/UIsAlwaysOnTop&gt;
+  &lt;MaxParameters&gt;200&lt;/MaxParameters&gt;
+  &lt;UIBridgesTimeout&gt;4000&lt;/UIBridgesTimeout&gt;
+  &lt;LADSPA_PATH&gt;/home/markf/.ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa&lt;/LADSPA_PATH&gt;
+  &lt;DSSI_PATH&gt;/home/markf/.dssi:/usr/lib/dssi:/usr/local/lib/dssi&lt;/DSSI_PATH&gt;
+  &lt;LV2_PATH&gt;/home/markf/.lv2:/usr/lib/lv2:/usr/local/lib/lv2&lt;/LV2_PATH&gt;
+  &lt;VST2_PATH&gt;/home/markf/.vst:/usr/lib/lxvst:/usr/lib/vst:/usr/local/lib/lxvst:/usr/local/lib/vst/home/markf/.lxvst&lt;/VST2_PATH&gt;
+  &lt;VST3_PATH&gt;/home/markf/.vst3:/usr/lib/vst3:/usr/local/lib/vst3&lt;/VST3_PATH&gt;
+  &lt;SF2_PATH&gt;/home/markf/.sounds/sf2:/home/markf/.sounds/sf3:/usr/share/soundfonts:/usr/share/sounds/sf2:/usr/share/sounds/sf3&lt;/SF2_PATH&gt;
+  &lt;SFZ_PATH&gt;/home/markf/.sounds/sfz:/usr/share/sounds/sfz&lt;/SFZ_PATH&gt;
+  &lt;JSFX_PATH&gt;/home/markf/.config/REAPER/Effects&lt;/JSFX_PATH&gt;
+ &lt;/EngineSettings&gt;
+
+ &lt;!-- Audio Gain (Stereo) --&gt;
+ &lt;Plugin&gt;
+  &lt;Info&gt;
+   &lt;Type&gt;INTERNAL&lt;/Type&gt;
+   &lt;Name&gt;Audio Gain (Stereo)&lt;/Name&gt;
+   &lt;Label&gt;audiogain_s&lt;/Label&gt;
+  &lt;/Info&gt;
+
+  &lt;Data&gt;
+   &lt;Active&gt;Yes&lt;/Active&gt;
+   &lt;ControlChannel&gt;1&lt;/ControlChannel&gt;
+   &lt;Options&gt;0x0&lt;/Options&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;0&lt;/Index&gt;
+    &lt;Name&gt;Gain&lt;/Name&gt;
+    &lt;Value&gt;3.20588231086731&lt;/Value&gt;
+   &lt;/Parameter&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;1&lt;/Index&gt;
+    &lt;Name&gt;Apply Left&lt;/Name&gt;
+    &lt;Value&gt;1&lt;/Value&gt;
+   &lt;/Parameter&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;2&lt;/Index&gt;
+    &lt;Name&gt;Apply Right&lt;/Name&gt;
+    &lt;Value&gt;1&lt;/Value&gt;
+   &lt;/Parameter&gt;
+  &lt;/Data&gt;
+ &lt;/Plugin&gt;
+
+ &lt;Patchbay&gt;
+  &lt;Connection&gt;
+   &lt;Source&gt;Audio Input:Left&lt;/Source&gt;
+   &lt;Target&gt;Audio Gain (Stereo):input_1&lt;/Target&gt;
+  &lt;/Connection&gt;
+  &lt;Connection&gt;
+   &lt;Source&gt;Audio Input:Right&lt;/Source&gt;
+   &lt;Target&gt;Audio Gain (Stereo):input_2&lt;/Target&gt;
+  &lt;/Connection&gt;
+  &lt;Connection&gt;
+   &lt;Source&gt;Audio Gain (Stereo):output_1&lt;/Source&gt;
+   &lt;Target&gt;Audio Output:Left&lt;/Target&gt;
+  &lt;/Connection&gt;
+  &lt;Connection&gt;
+   &lt;Source&gt;Audio Gain (Stereo):output_2&lt;/Source&gt;
+   &lt;Target&gt;Audio Output:Right&lt;/Target&gt;
+  &lt;/Connection&gt;
+  &lt;Positions&gt;
+   &lt;Position x1=&quot;291&quot; y1=&quot;46&quot; pluginId=&quot;0&quot;&gt;
+    &lt;Name&gt;Audio Gain (Stereo)&lt;/Name&gt;
+   &lt;/Position&gt;
+   &lt;Position x1=&quot;1550&quot; y1=&quot;1418&quot; x2=&quot;239&quot; y2=&quot;265&quot;&gt;
+    &lt;Name&gt;Midi Output&lt;/Name&gt;
+   &lt;/Position&gt;
+   &lt;Position x1=&quot;127&quot; y1=&quot;263&quot; x2=&quot;1943&quot; y2=&quot;1355&quot;&gt;
+    &lt;Name&gt;Midi Input&lt;/Name&gt;
+   &lt;/Position&gt;
+   &lt;Position x1=&quot;1550&quot; y1=&quot;1281&quot; x2=&quot;524&quot; y2=&quot;47&quot;&gt;
+    &lt;Name&gt;Audio Output&lt;/Name&gt;
+   &lt;/Position&gt;
+   &lt;Position x1=&quot;84&quot; y1=&quot;46&quot; x2=&quot;1952&quot; y2=&quot;1200&quot;&gt;
+    &lt;Name&gt;Audio Input&lt;/Name&gt;
+   &lt;/Position&gt;
+  &lt;/Positions&gt;
+ &lt;/Patchbay&gt;
+&lt;/CARLA-PROJECT&gt;
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>Clarett 4Pre USB Multichannel:capture_AUX0</Source>
+   <Target>Carla-Patchbay:input_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Clarett 4Pre USB Multichannel:capture_AUX0</Source>
+   <Target>Carla-Patchbay:input_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Google Chrome:output_FL</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Google Chrome:output_FR</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Google Chrome:output_RL</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_RL</Target>
+  </Connection>
+  <Connection>
+   <Source>Google Chrome:output_RR</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_RR</Target>
+  </Connection>
+  <Connection>
+   <Source>Google Chrome:output_FC</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_FC</Target>
+  </Connection>
+  <Connection>
+   <Source>Google Chrome:output_LFE</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_LFE</Target>
+  </Connection>
+  <Connection>
+   <Source>Google Chrome:output_SL</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_SL</Target>
+  </Connection>
+  <Connection>
+   <Source>Google Chrome:output_SR</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_SR</Target>
+  </Connection>
+  <Positions>
+   <Position x1="940" y1="1546" x2="2068" y2="1274">
+    <Name>Clarett 4Pre USB Multichannel</Name>
+   </Position>
+   <Position x1="1372" y1="1686" x2="2081" y2="1235">
+    <Name>Clarett 4Pre USB Analog Surround 7.1</Name>
+   </Position>
+   <Position x1="1044" y1="1825" x2="1048" y2="1976">
+    <Name>Midi-Bridge</Name>
+   </Position>
+   <Position x1="1044" y1="1899" x2="1290" y2="1993">
+    <Name>BLE MIDI 1</Name>
+   </Position>
+   <Position x1="1560" y1="1238">
+    <Name>Google Chrome</Name>
+   </Position>
+   <Position x1="1635" y1="1488" pluginId="0">
+    <Name>Carla-Patchbay</Name>
+   </Position>
+   <Position x1="1310" y1="1001">
+    <Name>Chromium-159</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

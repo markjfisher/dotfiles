@@ -1,0 +1,78 @@
+<!DOCTYPE patchbay>
+<patchbay name="pb1" version="0.9.2">
+ <items>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_SR"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_SR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FC"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FC"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_LFE"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_LFE"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_RR"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_RR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Chromium input" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Chromium input-1" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Carla-Patchbay" port="Carla-Patchbay:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FL"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_SL"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_SL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Big Meter" port="Big Meter:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Chromium input" port="Chromium input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Chromium input-1" port="Chromium input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Big Meter" port="Big Meter:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Carla-Patchbay" port="Carla-Patchbay:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_RL"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_RL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FR"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FL"/>
+  </item>
+ </items>
+</patchbay>
+
