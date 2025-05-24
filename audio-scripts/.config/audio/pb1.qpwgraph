@@ -2,6 +2,10 @@
 <patchbay name="pb1" version="0.9.2">
  <items>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Audio" port="Music Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Google Chrome" port="Google Chrome:output_SR"/>
    <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_SR"/>
   </item>
@@ -10,8 +14,20 @@
    <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FC"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Google Chrome" port="Google Chrome:output_LFE"/>
    <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_LFE"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Google Chrome" port="Google Chrome:output_RR"/>
@@ -22,44 +38,152 @@
    <input node="Chromium input" port="Chromium input:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Audio" port="Music Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
    <input node="Chromium input-1" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="zynaddsubfx" port="zynaddsubfx:out_2"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Right)"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
    <input node="Carla-Patchbay" port="Carla-Patchbay:input_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Google Chrome" port="Google Chrome:output_FL"/>
    <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome" port="Google Chrome:output_SL"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_SL"/>
+   <output node="Chromium" port="Chromium:output_FL"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Test Microphone" port="Test Microphone:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Left)"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="Carla" port="Carla:audio-in1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla" port="Carla:audio-out1"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX1"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
    <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_SL"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_SL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="Carla-1" port="Carla:audio-in1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
    <input node="Big Meter" port="Big Meter:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium" port="Chromium:output_FR"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="StereoRecord" port="StereoRecord:In"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="zynaddsubfx" port="zynaddsubfx:out_1"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
    <input node="Chromium input" port="Chromium input:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="Chromium input-1" port="Chromium input:input_FL"/>
+   <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Right)"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio" port="Games Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [chrome]/ALSA Playback [chrome]" port="ALSA Playback [chrome]:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
    <input node="Big Meter" port="Big Meter:input_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ZynAddSubFX" port="ZynAddSubFX:output_1"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio" port="Games Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Chromium input-1" port="Chromium input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
    <input node="Carla-Patchbay" port="Carla-Patchbay:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [chrome]/ALSA Playback [chrome]" port="ALSA Playback [chrome]:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="StereoRecord" port="StereoRecord:In1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Test Microphone" port="Test Microphone:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Google Chrome" port="Google Chrome:output_RL"/>
@@ -70,8 +194,28 @@
    <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="Carla" port="Carla:audio-in2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ZynAddSubFX" port="ZynAddSubFX:output_2"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
    <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla" port="Carla:audio-out2"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="Carla-1" port="Carla:audio-in2"/>
   </item>
  </items>
 </patchbay>

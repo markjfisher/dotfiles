@@ -1,12 +1,17 @@
 [Unit]
 Description=audio-graph service
 After=graphical-session.target
+PartOf=graphical-session.target
 
 [Service]
-User=markf
-ExecStart=/home/.local/bin/start-audio-graph.sh
-ExecStop=/home/.local/bin/stop-audio-graph.sh
 Type=simple
+User=markf
+Environment=DISPLAY=:0
+Environment=WAYLAND_DISPLAY=wayland-1
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+SupplementaryGroups=audio video input
+ExecStart=/home/markf/.local/bin/start-audio-graph.sh
+ExecStop=/home/markf/.local/bin/stop-audio-graph.sh
 Restart=on-failure
 
 [Install]
