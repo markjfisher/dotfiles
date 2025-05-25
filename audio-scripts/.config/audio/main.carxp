@@ -14,12 +14,47 @@
   <BeatsPerMinute>120</BeatsPerMinute>
  </Transport>
 
- <!-- Carla-Patchbay -->
+ <!-- LoudMax Stereo -->
  <Plugin>
   <Info>
-   <Type>INTERNAL</Type>
-   <Name>Carla-Patchbay</Name>
-   <Label>carlapatchbay</Label>
+   <Type>LADSPA</Type>
+   <Name>Discord LM Compressor</Name>
+   <Binary>/usr/lib/ladspa/la_LoudMax64.so</Binary>
+   <Label>ldmx_stereo</Label>
+   <UniqueID>5502</UniqueID>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Threshold</Name>
+    <Value>-19.6323528289795</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Output</Name>
+    <Value>-13.235294342041</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Inter-Sample Peaks</Name>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- ZynAddSubFX -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>ZynAddSubFX</Name>
+   <URI>http://zynaddsubfx.sourceforge.net</URI>
   </Info>
 
   <Data>
@@ -29,8 +64,1685 @@
 
    <Parameter>
     <Index>0</Index>
+    <Name>Slot 1</Name>
+    <Symbol>slot1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Slot 2</Name>
+    <Symbol>slot2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Slot 3</Name>
+    <Symbol>slot3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Slot 4</Name>
+    <Symbol>slot4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Slot 5</Name>
+    <Symbol>slot5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Slot 6</Name>
+    <Symbol>slot6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Slot 7</Name>
+    <Symbol>slot7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Slot 8</Name>
+    <Symbol>slot8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Slot 9</Name>
+    <Symbol>slot9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Slot 10</Name>
+    <Symbol>slot10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Slot 11</Name>
+    <Symbol>slot11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Slot 12</Name>
+    <Symbol>slot12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Slot 13</Name>
+    <Symbol>slot13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Slot 14</Name>
+    <Symbol>slot14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Slot 15</Name>
+    <Symbol>slot15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Slot 16</Name>
+    <Symbol>slot16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:distrho:state</Key>
+    <Value>
+
+&lt;?xml version=&quot;1.0f&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE ZynAddSubFX-data&gt;
+&lt;ZynAddSubFX-data version-major=&quot;3&quot; version-minor=&quot;0&quot;
+version-revision=&quot;6&quot; ZynAddSubFX-author=&quot;Nasca Octavian Paul&quot;&gt;
+&lt;INFORMATION&gt;
+&lt;par_bool name=&quot;PADsynth_used&quot; value=&quot;yes&quot; /&gt;
+&lt;/INFORMATION&gt;
+&lt;BASE_PARAMETERS&gt;
+&lt;par name=&quot;max_midi_parts&quot; value=&quot;16&quot; /&gt;
+&lt;par name=&quot;max_kit_items_per_instrument&quot; value=&quot;16&quot; /&gt;
+&lt;par name=&quot;max_system_effects&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;max_insertion_effects&quot; value=&quot;8&quot; /&gt;
+&lt;par name=&quot;max_instrument_effects&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;max_addsynth_voices&quot; value=&quot;8&quot; /&gt;
+&lt;/BASE_PARAMETERS&gt;
+&lt;MASTER&gt;
+&lt;par_real name=&quot;volume&quot; value=&quot;1.29078&quot; exact_value=&quot;0x3FA5383F&quot; /&gt;
+&lt;par name=&quot;key_shift&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;nrpn_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;MICROTONAL&gt;
+&lt;string name=&quot;name&quot;&gt;12tET&lt;/string&gt;
+&lt;string name=&quot;comment&quot;&gt;Equal Temperament 12 notes per octave&lt;/string&gt;
+&lt;par_bool name=&quot;invert_up_down&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;invert_up_down_center&quot; value=&quot;60&quot; /&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;global_fine_detune&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;a_note&quot; value=&quot;69&quot; /&gt;
+&lt;par_real name=&quot;a_freq&quot; value=&quot;440&quot; exact_value=&quot;0x43DC0000&quot; /&gt;
+&lt;/MICROTONAL&gt;
+&lt;automation&gt;
+&lt;mgr-info nslots=&quot;16&quot; nautomations=&quot;4&quot; ncontrol=&quot;8&quot; /&gt;
+&lt;/automation&gt;
+&lt;PART id=&quot;0&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;yes&quot; /&gt;
+&lt;par_real name=&quot;volume&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;par name=&quot;panning&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;min_key&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;max_key&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;key_shift&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;rcv_chn&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;velocity_sensing&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;velocity_offset&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;note_on&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;poly_mode&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;legato_mode&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;key_limit&quot; value=&quot;15&quot; /&gt;
+&lt;par name=&quot;voice_limit&quot; value=&quot;0&quot; /&gt;
+&lt;INSTRUMENT&gt;
+&lt;INFO&gt;
+&lt;string name=&quot;name&quot;&gt;&lt;/string&gt;
+&lt;string name=&quot;author&quot;&gt;Cris Owl Alvarez
+Licensed under LGPL v2 or later license&lt;/string&gt;
+&lt;string name=&quot;comments&quot;&gt;&lt;/string&gt;
+&lt;par name=&quot;type&quot; value=&quot;12&quot; /&gt;
+&lt;/INFO&gt;
+&lt;INSTRUMENT_KIT&gt;
+&lt;par name=&quot;kit_mode&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;drum_mode&quot; value=&quot;no&quot; /&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;0&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;yes&quot; /&gt;
+&lt;string name=&quot;name&quot;&gt;&lt;/string&gt;
+&lt;par_bool name=&quot;muted&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;min_key&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;max_key&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;send_to_instrument_effect&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;add_enabled&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;sub_enabled&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;pad_enabled&quot; value=&quot;yes&quot; /&gt;
+&lt;PAD_SYNTH_PARAMETERS&gt;
+&lt;par_bool name=&quot;stereo&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;mode&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;bandwidth&quot; value=&quot;645&quot; /&gt;
+&lt;par name=&quot;bandwidth_scale&quot; value=&quot;2&quot; /&gt;
+&lt;HARMONIC_PROFILE&gt;
+&lt;par name=&quot;base_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;base_par1&quot; value=&quot;104&quot; /&gt;
+&lt;par name=&quot;frequency_multiplier&quot; value=&quot;56&quot; /&gt;
+&lt;par name=&quot;modulator_par1&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;modulator_frequency&quot; value=&quot;30&quot; /&gt;
+&lt;par name=&quot;width&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;amplitude_multiplier_type&quot; value=&quot;1&quot; /&gt;
+&lt;par name=&quot;amplitude_multiplier_mode&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;amplitude_multiplier_par1&quot; value=&quot;80&quot; /&gt;
+&lt;par name=&quot;amplitude_multiplier_par2&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;autoscale&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;one_half&quot; value=&quot;0&quot; /&gt;
+&lt;/HARMONIC_PROFILE&gt;
+&lt;OSCIL&gt;
+&lt;par name=&quot;harmonic_mag_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;base_function&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;base_function_par&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;base_function_modulation&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;base_function_modulation_par1&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;base_function_modulation_par2&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;base_function_modulation_par3&quot; value=&quot;32&quot; /&gt;
+&lt;par name=&quot;modulation&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;modulation_par1&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;modulation_par2&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;modulation_par3&quot; value=&quot;32&quot; /&gt;
+&lt;par name=&quot;wave_shaping&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;wave_shaping_function&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;filter_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;filter_par1&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;filter_par2&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;filter_before_wave_shaping&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;spectrum_adjust_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;spectrum_adjust_par&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;rand&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;amp_rand_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;amp_rand_power&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;harmonic_shift&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;harmonic_shift_first&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;adaptive_harmonics&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;adaptive_harmonics_base_frequency&quot; value=&quot;128&quot; /&gt;
+&lt;par name=&quot;adaptive_harmonics_power&quot; value=&quot;100&quot; /&gt;
+&lt;par name=&quot;adaptive_harmonics_par&quot; value=&quot;50&quot; /&gt;
+&lt;HARMONICS&gt;
+&lt;HARMONIC id=&quot;1&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;2&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;33&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;3&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;92&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;4&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;36&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;5&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;97&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;6&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;47&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;7&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;122&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;8&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;15&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;9&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;95&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;10&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;13&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;11&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;93&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;12&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;29&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;/HARMONICS&gt;
+&lt;/OSCIL&gt;
+&lt;RESONANCE&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;max_db&quot; value=&quot;20&quot; /&gt;
+&lt;par name=&quot;center_freq&quot; value=&quot;104&quot; /&gt;
+&lt;par name=&quot;octaves_freq&quot; value=&quot;127&quot; /&gt;
+&lt;par_bool name=&quot;protect_fundamental_frequency&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;resonance_points&quot; value=&quot;256&quot; /&gt;
+&lt;RESPOINT id=&quot;0&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;125&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;1&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;68&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;2&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;53&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;3&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;69&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;4&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;61&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;5&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;52&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;6&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;54&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;7&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;70&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;8&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;57&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;9&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;48&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;10&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;43&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;11&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;70&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;12&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;85&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;13&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;73&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;14&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;85&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;15&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;66&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;16&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;72&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;17&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;50&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;18&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;26&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;19&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;23&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;20&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;38&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;21&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;72&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;22&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;72&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;23&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;40&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;24&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;26&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;25&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;35&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;26&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;44&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;27&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;63&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;28&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;72&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;29&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;50&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;30&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;50&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;31&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;58&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;32&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;57&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;33&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;46&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;34&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;44&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;35&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;59&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;36&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;56&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;37&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;49&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;38&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;46&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;39&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;37&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;40&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;32&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;41&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;43&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;42&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;45&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;43&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;75&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;44&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;91&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;45&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;84&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;46&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;82&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;47&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;94&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;48&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;82&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;49&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;90&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;50&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;75&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;51&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;55&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;52&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;53&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;53&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;44&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;54&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;38&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;55&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;33&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;56&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;41&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;57&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;25&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;58&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;29&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;59&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;27&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;60&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;34&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;61&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;43&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;62&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;33&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;63&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;48&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;64&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;79&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;65&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;74&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;66&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;76&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;67&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;88&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;68&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;83&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;69&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;52&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;70&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;46&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;71&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;31&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;72&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;73&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;74&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;75&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;76&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;77&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;78&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;79&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;80&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;81&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;82&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;83&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;84&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;85&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;86&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;87&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;88&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;89&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;90&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;91&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;92&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;93&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;94&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;95&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;96&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;97&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;98&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;99&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;100&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;101&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;102&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;103&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;104&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;105&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;106&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;107&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;108&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;109&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;110&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;111&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;112&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;113&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;114&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;115&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;116&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;117&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;118&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;119&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;120&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;121&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;122&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;123&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;124&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;125&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;126&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;127&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;128&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;129&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;130&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;131&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;132&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;133&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;134&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;135&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;136&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;137&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;138&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;139&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;140&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;141&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;142&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;143&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;144&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;145&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;146&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;147&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;148&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;149&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;150&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;151&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;152&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;153&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;154&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;155&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;156&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;157&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;158&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;159&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;160&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;161&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;162&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;163&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;164&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;165&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;166&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;167&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;168&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;169&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;170&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;171&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;172&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;173&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;174&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;175&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;176&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;177&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;178&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;179&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;180&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;181&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;182&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;183&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;184&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;185&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;186&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;187&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;188&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;189&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;190&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;191&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;192&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;193&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;194&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;195&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;196&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;197&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;198&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;199&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;200&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;201&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;202&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;203&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;204&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;205&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;206&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;207&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;208&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;209&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;210&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;211&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;212&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;213&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;214&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;215&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;216&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;217&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;218&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;219&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;220&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;221&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;222&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;223&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;224&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;225&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;226&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;227&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;228&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;229&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;230&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;231&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;232&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;233&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;234&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;235&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;236&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;237&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;238&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;239&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;240&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;241&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;242&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;243&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;244&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;245&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;246&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;247&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;1&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;248&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;6&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;249&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;6&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;250&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;5&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;251&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;5&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;252&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;4&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;253&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;4&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;254&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;3&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;RESPOINT id=&quot;255&quot;&gt;
+&lt;par name=&quot;val&quot; value=&quot;3&quot; /&gt;
+&lt;/RESPOINT&gt;
+&lt;/RESONANCE&gt;
+&lt;HARMONIC_POSITION&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;parameter1&quot; value=&quot;30&quot; /&gt;
+&lt;par name=&quot;parameter2&quot; value=&quot;88&quot; /&gt;
+&lt;par name=&quot;parameter3&quot; value=&quot;72&quot; /&gt;
+&lt;/HARMONIC_POSITION&gt;
+&lt;SAMPLE_QUALITY&gt;
+&lt;par name=&quot;samplesize&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;basenote&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;octaves&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;samples_per_octave&quot; value=&quot;2&quot; /&gt;
+&lt;/SAMPLE_QUALITY&gt;
+&lt;AMPLITUDE_PARAMETERS&gt;
+&lt;par name=&quot;volume&quot; value=&quot;90&quot; /&gt;
+&lt;par name=&quot;panning&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;velocity_sensing&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;fadein_adjustment&quot; value=&quot;20&quot; /&gt;
+&lt;par name=&quot;punch_strength&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;punch_time&quot; value=&quot;60&quot; /&gt;
+&lt;par name=&quot;punch_stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;punch_velocity_sensing&quot; value=&quot;72&quot; /&gt;
+&lt;AMPLITUDE_ENVELOPE&gt;
+&lt;par_bool name=&quot;free_mode&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;env_points&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;env_sustain&quot; value=&quot;2&quot; /&gt;
+&lt;par name=&quot;env_stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;forced_release&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;linear_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;repeating_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par_real name=&quot;A_dt&quot; value=&quot;1.18233&quot; exact_value=&quot;0x3F975689&quot; /&gt;
+&lt;par_real name=&quot;D_dt&quot; value=&quot;0.127326&quot; exact_value=&quot;0x3E02619E&quot; /&gt;
+&lt;par_real name=&quot;R_dt&quot; value=&quot;1.53943&quot; exact_value=&quot;0x3FC50BED&quot; /&gt;
+&lt;par name=&quot;A_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;D_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;S_val&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;R_val&quot; value=&quot;64&quot; /&gt;
+&lt;/AMPLITUDE_ENVELOPE&gt;
+&lt;AMPLITUDE_LFO&gt;
+&lt;par_real name=&quot;freq&quot; value=&quot;6.47918&quot; exact_value=&quot;0x40CF5569&quot; /&gt;
+&lt;par name=&quot;intensity&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;start_phase&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;cutoff&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;lfo_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_amplitude&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_frequency&quot; value=&quot;0&quot; /&gt;
+&lt;par_real name=&quot;delay&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;par_real name=&quot;fadein&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;par_real name=&quot;fadeout&quot; value=&quot;10&quot; exact_value=&quot;0x41200000&quot; /&gt;
+&lt;par name=&quot;stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;continous&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;numerator&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;denominator&quot; value=&quot;4&quot; /&gt;
+&lt;/AMPLITUDE_LFO&gt;
+&lt;/AMPLITUDE_PARAMETERS&gt;
+&lt;FREQUENCY_PARAMETERS&gt;
+&lt;par name=&quot;fixed_freq&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;fixed_freq_et&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;bend_adjust&quot; value=&quot;88&quot; /&gt;
+&lt;par name=&quot;offset_hz&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;detune&quot; value=&quot;8192&quot; /&gt;
+&lt;par name=&quot;coarse_detune&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;detune_type&quot; value=&quot;1&quot; /&gt;
+&lt;FREQUENCY_ENVELOPE&gt;
+&lt;par_bool name=&quot;free_mode&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;env_points&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;env_sustain&quot; value=&quot;1&quot; /&gt;
+&lt;par name=&quot;env_stretch&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;forced_release&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;linear_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;repeating_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par_real name=&quot;A_dt&quot; value=&quot;0.254356&quot; exact_value=&quot;0x3E823AEF&quot; /&gt;
+&lt;par_real name=&quot;D_dt&quot; value=&quot;0.00925031&quot; exact_value=&quot;0x3C178EA0&quot; /&gt;
+&lt;par_real name=&quot;R_dt&quot; value=&quot;0.498893&quot; exact_value=&quot;0x3EFF6EF3&quot; /&gt;
+&lt;par name=&quot;A_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;D_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;S_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;R_val&quot; value=&quot;64&quot; /&gt;
+&lt;/FREQUENCY_ENVELOPE&gt;
+&lt;FREQUENCY_LFO&gt;
+&lt;par_real name=&quot;freq&quot; value=&quot;3.7189&quot; exact_value=&quot;0x406E027D&quot; /&gt;
+&lt;par name=&quot;intensity&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;start_phase&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;cutoff&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;lfo_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_amplitude&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_frequency&quot; value=&quot;0&quot; /&gt;
+&lt;par_real name=&quot;delay&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;par_real name=&quot;fadein&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;par_real name=&quot;fadeout&quot; value=&quot;10&quot; exact_value=&quot;0x41200000&quot; /&gt;
+&lt;par name=&quot;stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;continous&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;numerator&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;denominator&quot; value=&quot;4&quot; /&gt;
+&lt;/FREQUENCY_LFO&gt;
+&lt;/FREQUENCY_PARAMETERS&gt;
+&lt;FILTER_PARAMETERS&gt;
+&lt;par name=&quot;velocity_sensing_amplitude&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;velocity_sensing&quot; value=&quot;64&quot; /&gt;
+&lt;FILTER&gt;
+&lt;par name=&quot;category&quot; value=&quot;2&quot; /&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;par_real name=&quot;basefreq&quot; value=&quot;7828.58&quot; exact_value=&quot;0x45F4A49A&quot; /&gt;
+&lt;par_real name=&quot;baseq&quot; value=&quot;0.1&quot; exact_value=&quot;0x3DCCCCD0&quot; /&gt;
+&lt;par name=&quot;stages&quot; value=&quot;0&quot; /&gt;
+&lt;par_real name=&quot;freq_tracking&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;par_real name=&quot;gain&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;/FILTER&gt;
+&lt;FILTER_ENVELOPE&gt;
+&lt;par_bool name=&quot;free_mode&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;env_points&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;env_sustain&quot; value=&quot;2&quot; /&gt;
+&lt;par name=&quot;env_stretch&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;forced_release&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;linear_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;repeating_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par_real name=&quot;A_dt&quot; value=&quot;0.127326&quot; exact_value=&quot;0x3E02619E&quot; /&gt;
+&lt;par_real name=&quot;D_dt&quot; value=&quot;0.969636&quot; exact_value=&quot;0x3F783A0B&quot; /&gt;
+&lt;par_real name=&quot;R_dt&quot; value=&quot;0.498893&quot; exact_value=&quot;0x3EFF6EF3&quot; /&gt;
+&lt;par name=&quot;A_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;D_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;S_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;R_val&quot; value=&quot;64&quot; /&gt;
+&lt;/FILTER_ENVELOPE&gt;
+&lt;FILTER_LFO&gt;
+&lt;par_real name=&quot;freq&quot; value=&quot;6.47918&quot; exact_value=&quot;0x40CF5569&quot; /&gt;
+&lt;par name=&quot;intensity&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;start_phase&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;cutoff&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;lfo_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_amplitude&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_frequency&quot; value=&quot;0&quot; /&gt;
+&lt;par_real name=&quot;delay&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;par_real name=&quot;fadein&quot; value=&quot;0&quot; exact_value=&quot;0x00000000&quot; /&gt;
+&lt;par_real name=&quot;fadeout&quot; value=&quot;10&quot; exact_value=&quot;0x41200000&quot; /&gt;
+&lt;par name=&quot;stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;continous&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;numerator&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;denominator&quot; value=&quot;4&quot; /&gt;
+&lt;/FILTER_LFO&gt;
+&lt;/FILTER_PARAMETERS&gt;
+&lt;/PAD_SYNTH_PARAMETERS&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;1&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;2&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;3&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;4&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;5&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;6&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;7&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;8&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;9&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;10&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;11&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;12&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;13&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;14&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;15&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;/INSTRUMENT_KIT&gt;
+&lt;INSTRUMENT_EFFECTS&gt;
+&lt;INSTRUMENT_EFFECT id=&quot;0&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;par name=&quot;route&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;bypass&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_EFFECT&gt;
+&lt;INSTRUMENT_EFFECT id=&quot;1&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;par name=&quot;route&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;bypass&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_EFFECT&gt;
+&lt;INSTRUMENT_EFFECT id=&quot;2&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;par name=&quot;route&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;bypass&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_EFFECT&gt;
+&lt;/INSTRUMENT_EFFECTS&gt;
+&lt;/INSTRUMENT&gt;
+&lt;CONTROLLER&gt;
+&lt;par name=&quot;pitchwheel_bendrange&quot; value=&quot;200&quot; /&gt;
+&lt;par name=&quot;pitchwheel_bendrange_down&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;pitchwheel_split&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;expression_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;panning_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;filter_cutoff_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;filter_q_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;bandwidth_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;mod_wheel_depth&quot; value=&quot;80&quot; /&gt;
+&lt;par_bool name=&quot;mod_wheel_exponential&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;fm_amp_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;volume_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;sustain_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;portamento_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;portamento_time&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;portamento_pitchthresh&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;portamento_pitchthreshtype&quot; value=&quot;1&quot; /&gt;
+&lt;par name=&quot;portamento_portamento&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;portamento_updowntimestretch&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;portamento_proportional&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;portamento_proprate&quot; value=&quot;80&quot; /&gt;
+&lt;par name=&quot;portamento_propdepth&quot; value=&quot;90&quot; /&gt;
+&lt;par name=&quot;resonance_center_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;resonance_bandwidth_depth&quot; value=&quot;64&quot; /&gt;
+&lt;/CONTROLLER&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;1&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;2&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;3&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;4&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;5&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;6&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;7&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;8&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;9&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;10&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;11&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;12&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;13&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;14&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;15&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;SYSTEM_EFFECTS&gt;
+&lt;SYSTEM_EFFECT id=&quot;0&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;VOLUME id=&quot;0&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;1&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;2&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;3&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;4&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;5&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;6&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;7&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;8&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;9&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;10&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;11&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;12&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;13&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;14&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;15&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;SENDTO id=&quot;1&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;SENDTO id=&quot;2&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;SENDTO id=&quot;3&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;/SYSTEM_EFFECT&gt;
+&lt;SYSTEM_EFFECT id=&quot;1&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;VOLUME id=&quot;0&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;1&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;2&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;3&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;4&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;5&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;6&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;7&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;8&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;9&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;10&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;11&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;12&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;13&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;14&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;15&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;SENDTO id=&quot;2&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;SENDTO id=&quot;3&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;/SYSTEM_EFFECT&gt;
+&lt;SYSTEM_EFFECT id=&quot;2&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;VOLUME id=&quot;0&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;1&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;2&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;3&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;4&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;5&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;6&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;7&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;8&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;9&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;10&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;11&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;12&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;13&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;14&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;15&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;SENDTO id=&quot;3&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;/SYSTEM_EFFECT&gt;
+&lt;SYSTEM_EFFECT id=&quot;3&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;VOLUME id=&quot;0&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;1&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;2&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;3&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;4&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;5&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;6&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;7&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;8&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;9&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;10&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;11&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;12&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;13&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;14&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;15&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;/SYSTEM_EFFECT&gt;
+&lt;/SYSTEM_EFFECTS&gt;
+&lt;INSERTION_EFFECTS&gt;
+&lt;INSERTION_EFFECT id=&quot;0&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;1&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;2&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;3&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;4&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;5&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;6&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;7&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;/INSERTION_EFFECTS&gt;
+&lt;/MASTER&gt;
+&lt;/ZynAddSubFX-data&gt;
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- StereoRecord -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>StereoRecord</Name>
+   <URI>https://github.com/brummer10/screcord#stereo_record</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>FORM</Name>
+    <Symbol>FORM</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>REC</Name>
+    <Symbol>REC</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Audio Gain (Stereo) -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>Master Gain</Name>
+   <Label>audiogain_s</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>0.8941666</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
     <Name>Gain</Name>
-    <Value>3.20588231086731</Value>
+    <Value>1.98039209842682</Value>
    </Parameter>
 
    <Parameter>
@@ -46,100 +1758,9 @@
    </Parameter>
 
    <CustomData>
-    <Type>http://kxstudio.sf.net/ns/carla/chunk</Type>
-    <Key>State</Key>
-    <Value>
-&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
-&lt;!DOCTYPE CARLA-PROJECT&gt;
-&lt;CARLA-PROJECT VERSION=&apos;2.5&apos;&gt;
- &lt;EngineSettings&gt;
-  &lt;ForceStereo&gt;false&lt;/ForceStereo&gt;
-  &lt;PreferPluginBridges&gt;false&lt;/PreferPluginBridges&gt;
-  &lt;PreferUiBridges&gt;true&lt;/PreferUiBridges&gt;
-  &lt;UIsAlwaysOnTop&gt;false&lt;/UIsAlwaysOnTop&gt;
-  &lt;MaxParameters&gt;200&lt;/MaxParameters&gt;
-  &lt;UIBridgesTimeout&gt;4000&lt;/UIBridgesTimeout&gt;
-  &lt;LADSPA_PATH&gt;/home/markf/.ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa&lt;/LADSPA_PATH&gt;
-  &lt;DSSI_PATH&gt;/home/markf/.dssi:/usr/lib/dssi:/usr/local/lib/dssi&lt;/DSSI_PATH&gt;
-  &lt;LV2_PATH&gt;/home/markf/.lv2:/usr/lib/lv2:/usr/local/lib/lv2&lt;/LV2_PATH&gt;
-  &lt;VST2_PATH&gt;/home/markf/.vst:/usr/lib/lxvst:/usr/lib/vst:/usr/local/lib/lxvst:/usr/local/lib/vst/home/markf/.lxvst&lt;/VST2_PATH&gt;
-  &lt;VST3_PATH&gt;/home/markf/.vst3:/usr/lib/vst3:/usr/local/lib/vst3&lt;/VST3_PATH&gt;
-  &lt;SF2_PATH&gt;/home/markf/.sounds/sf2:/home/markf/.sounds/sf3:/usr/share/soundfonts:/usr/share/sounds/sf2:/usr/share/sounds/sf3&lt;/SF2_PATH&gt;
-  &lt;SFZ_PATH&gt;/home/markf/.sounds/sfz:/usr/share/sounds/sfz&lt;/SFZ_PATH&gt;
-  &lt;JSFX_PATH&gt;/home/markf/.config/REAPER/Effects&lt;/JSFX_PATH&gt;
- &lt;/EngineSettings&gt;
-
- &lt;!-- Audio Gain (Stereo) --&gt;
- &lt;Plugin&gt;
-  &lt;Info&gt;
-   &lt;Type&gt;INTERNAL&lt;/Type&gt;
-   &lt;Name&gt;Audio Gain (Stereo)&lt;/Name&gt;
-   &lt;Label&gt;audiogain_s&lt;/Label&gt;
-  &lt;/Info&gt;
-
-  &lt;Data&gt;
-   &lt;Active&gt;Yes&lt;/Active&gt;
-   &lt;ControlChannel&gt;1&lt;/ControlChannel&gt;
-   &lt;Options&gt;0x0&lt;/Options&gt;
-
-   &lt;Parameter&gt;
-    &lt;Index&gt;0&lt;/Index&gt;
-    &lt;Name&gt;Gain&lt;/Name&gt;
-    &lt;Value&gt;3.20588231086731&lt;/Value&gt;
-   &lt;/Parameter&gt;
-
-   &lt;Parameter&gt;
-    &lt;Index&gt;1&lt;/Index&gt;
-    &lt;Name&gt;Apply Left&lt;/Name&gt;
-    &lt;Value&gt;1&lt;/Value&gt;
-   &lt;/Parameter&gt;
-
-   &lt;Parameter&gt;
-    &lt;Index&gt;2&lt;/Index&gt;
-    &lt;Name&gt;Apply Right&lt;/Name&gt;
-    &lt;Value&gt;1&lt;/Value&gt;
-   &lt;/Parameter&gt;
-  &lt;/Data&gt;
- &lt;/Plugin&gt;
-
- &lt;Patchbay&gt;
-  &lt;Connection&gt;
-   &lt;Source&gt;Audio Input:Left&lt;/Source&gt;
-   &lt;Target&gt;Audio Gain (Stereo):input_1&lt;/Target&gt;
-  &lt;/Connection&gt;
-  &lt;Connection&gt;
-   &lt;Source&gt;Audio Input:Right&lt;/Source&gt;
-   &lt;Target&gt;Audio Gain (Stereo):input_2&lt;/Target&gt;
-  &lt;/Connection&gt;
-  &lt;Connection&gt;
-   &lt;Source&gt;Audio Gain (Stereo):output_1&lt;/Source&gt;
-   &lt;Target&gt;Audio Output:Left&lt;/Target&gt;
-  &lt;/Connection&gt;
-  &lt;Connection&gt;
-   &lt;Source&gt;Audio Gain (Stereo):output_2&lt;/Source&gt;
-   &lt;Target&gt;Audio Output:Right&lt;/Target&gt;
-  &lt;/Connection&gt;
-  &lt;Positions&gt;
-   &lt;Position x1=&quot;291&quot; y1=&quot;46&quot; pluginId=&quot;0&quot;&gt;
-    &lt;Name&gt;Audio Gain (Stereo)&lt;/Name&gt;
-   &lt;/Position&gt;
-   &lt;Position x1=&quot;1550&quot; y1=&quot;1418&quot; x2=&quot;239&quot; y2=&quot;265&quot;&gt;
-    &lt;Name&gt;Midi Output&lt;/Name&gt;
-   &lt;/Position&gt;
-   &lt;Position x1=&quot;127&quot; y1=&quot;263&quot; x2=&quot;1943&quot; y2=&quot;1355&quot;&gt;
-    &lt;Name&gt;Midi Input&lt;/Name&gt;
-   &lt;/Position&gt;
-   &lt;Position x1=&quot;1550&quot; y1=&quot;1281&quot; x2=&quot;524&quot; y2=&quot;47&quot;&gt;
-    &lt;Name&gt;Audio Output&lt;/Name&gt;
-   &lt;/Position&gt;
-   &lt;Position x1=&quot;84&quot; y1=&quot;46&quot; x2=&quot;1952&quot; y2=&quot;1200&quot;&gt;
-    &lt;Name&gt;Audio Input&lt;/Name&gt;
-   &lt;/Position&gt;
-  &lt;/Positions&gt;
- &lt;/Patchbay&gt;
-&lt;/CARLA-PROJECT&gt;
-
-    </Value>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
    </CustomData>
   </Data>
  </Plugin>
@@ -147,65 +1768,170 @@
  <ExternalPatchbay>
   <Connection>
    <Source>Clarett 4Pre USB Multichannel:capture_AUX0</Source>
-   <Target>Carla-Patchbay:input_1</Target>
+   <Target>Microphone Input:input_FL</Target>
   </Connection>
   <Connection>
    <Source>Clarett 4Pre USB Multichannel:capture_AUX0</Source>
-   <Target>Carla-Patchbay:input_2</Target>
+   <Target>Discord Microphone:input_FL</Target>
   </Connection>
   <Connection>
-   <Source>Google Chrome:output_FL</Source>
+   <Source>Clarett 4Pre USB Multichannel:capture_AUX0</Source>
+   <Target>Microphone Input:input_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Clarett 4Pre USB Multichannel:capture_AUX1</Source>
+   <Target>Discord Microphone:input_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Gain:output_1</Source>
+   <Target>Master Mix:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Gain:output_2</Source>
+   <Target>Master Mix:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX:Audio Output 1</Source>
+   <Target>Music Audio:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX:Audio Output 2</Source>
+   <Target>Music Audio:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord LM Compressor:Output (Left)</Source>
+   <Target>Master Gain:input_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord LM Compressor:Output (Right)</Source>
+   <Target>Master Gain:input_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Games Audio:monitor_FL</Source>
+   <Target>Master Gain:input_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Games Audio:monitor_FR</Source>
+   <Target>Master Gain:input_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Music Audio:monitor_FL</Source>
+   <Target>Master Gain:input_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Music Audio:monitor_FR</Source>
+   <Target>Master Gain:input_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Desktop Audio:monitor_FL</Source>
+   <Target>Master Gain:input_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Desktop Audio:monitor_FR</Source>
+   <Target>Master Gain:input_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Chrome Audio:monitor_FL</Source>
+   <Target>Master Gain:input_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Chrome Audio:monitor_FR</Source>
+   <Target>Master Gain:input_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord Audio:monitor_FL</Source>
+   <Target>Discord LM Compressor:Input (Left)</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord Audio:monitor_FR</Source>
+   <Target>Discord LM Compressor:Input (Right)</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Mix:monitor_FL</Source>
    <Target>Clarett 4Pre USB Analog Surround 7.1:playback_FL</Target>
   </Connection>
   <Connection>
-   <Source>Google Chrome:output_FR</Source>
+   <Source>Master Mix:monitor_FL</Source>
+   <Target>OBS:input_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Mix:monitor_FL</Source>
+   <Target>StereoRecord:In</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Mix:monitor_FR</Source>
    <Target>Clarett 4Pre USB Analog Surround 7.1:playback_FR</Target>
   </Connection>
   <Connection>
-   <Source>Google Chrome:output_RL</Source>
-   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_RL</Target>
+   <Source>Master Mix:monitor_FR</Source>
+   <Target>OBS:input_FR</Target>
   </Connection>
   <Connection>
-   <Source>Google Chrome:output_RR</Source>
-   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_RR</Target>
+   <Source>Master Mix:monitor_FR</Source>
+   <Target>StereoRecord:In1</Target>
   </Connection>
   <Connection>
-   <Source>Google Chrome:output_FC</Source>
-   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_FC</Target>
+   <Source>Microphone Input:capture_FL</Source>
+   <Target>OBS:input_FL-1321</Target>
   </Connection>
   <Connection>
-   <Source>Google Chrome:output_LFE</Source>
-   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_LFE</Target>
-  </Connection>
-  <Connection>
-   <Source>Google Chrome:output_SL</Source>
-   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_SL</Target>
-  </Connection>
-  <Connection>
-   <Source>Google Chrome:output_SR</Source>
-   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_SR</Target>
+   <Source>Microphone Input:capture_FR</Source>
+   <Target>OBS:input_FR-1323</Target>
   </Connection>
   <Positions>
-   <Position x1="940" y1="1546" x2="2068" y2="1274">
+   <Position x1="51" y1="832" x2="2068" y2="1274">
     <Name>Clarett 4Pre USB Multichannel</Name>
    </Position>
-   <Position x1="1372" y1="1686" x2="2081" y2="1235">
+   <Position x1="79" y1="171" x2="2059" y2="1348">
+    <Name>USB PnP Sound Device Mono</Name>
+   </Position>
+   <Position x1="29" y1="233" x2="1613" y2="509">
     <Name>Clarett 4Pre USB Analog Surround 7.1</Name>
    </Position>
-   <Position x1="1044" y1="1825" x2="1048" y2="1976">
+   <Position x1="603" y1="218">
+    <Name>Games Audio</Name>
+   </Position>
+   <Position x1="602" y1="318">
+    <Name>Music Audio</Name>
+   </Position>
+   <Position x1="606" y1="413">
+    <Name>Desktop Audio</Name>
+   </Position>
+   <Position x1="609" y1="498">
+    <Name>Chrome Audio</Name>
+   </Position>
+   <Position x1="412" y1="595">
+    <Name>Discord Audio</Name>
+   </Position>
+   <Position x1="1086" y1="397">
+    <Name>Master Mix</Name>
+   </Position>
+   <Position x1="437" y1="837">
+    <Name>Microphone Input</Name>
+   </Position>
+   <Position x1="437" y1="916">
+    <Name>Discord Microphone</Name>
+   </Position>
+   <Position x1="1535" y1="778">
+    <Name>OBS</Name>
+   </Position>
+   <Position x1="1845" y1="49" x2="1843" y2="176">
     <Name>Midi-Bridge</Name>
    </Position>
-   <Position x1="1044" y1="1899" x2="1290" y2="1993">
+   <Position x1="1845" y1="123" x2="1954" y2="124">
     <Name>BLE MIDI 1</Name>
    </Position>
-   <Position x1="1560" y1="1238">
-    <Name>Google Chrome</Name>
+   <Position x1="600" y1="591">
+    <Name>Discord LM Compressor</Name>
    </Position>
-   <Position x1="1635" y1="1488" pluginId="0">
-    <Name>Carla-Patchbay</Name>
+   <Position x1="108" y1="59">
+    <Name>ZynAddSubFX</Name>
    </Position>
-   <Position x1="1310" y1="1001">
-    <Name>Chromium-159</Name>
+   <Position x1="1545" y1="312">
+    <Name>StereoRecord</Name>
+   </Position>
+   <Position x1="922" y1="394" pluginId="3">
+    <Name>Master Gain</Name>
    </Position>
   </Positions>
  </ExternalPatchbay>

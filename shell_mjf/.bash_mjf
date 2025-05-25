@@ -11,5 +11,6 @@ fi
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init bash)"
 
+export PATH=$PATH:$HOME/.local/bin
 alias ma="$HOME/.local/bin/start-audio-graph.sh"
 

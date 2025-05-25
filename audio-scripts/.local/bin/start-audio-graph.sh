@@ -20,30 +20,44 @@ while ! pw-cli info >/dev/null 2>&1; do
     sleep 1
 done
 
-# Start Carla
-echo "Starting Carla..."
-carla "/home/markf/.config/audio/main.carxp" > /dev/null 2>&1 &
-CARLA_PID=$!
+# Function to check if a process is running
+is_running() {
+    pgrep -f "$1" >/dev/null
+    return $?
+}
 
-# Give Carla time to start
-sleep 2
+# Start Carla if not already running
+if ! is_running "carla.*main.carxp"; then
+    echo "Starting Carla..."
+    carla "/home/markf/.config/audio/main.carxp" > /dev/null 2>&1 &
+    CARLA_PID=$!
 
-# Check if Carla is running
-if ! kill -0 $CARLA_PID 2>/dev/null; then
-    echo "ERROR: Carla failed to start"
-    exit 1
+    # Give Carla time to start
+    sleep 2
+
+    # Check if Carla started successfully
+    if ! kill -0 $CARLA_PID 2>/dev/null; then
+        echo "ERROR: Carla failed to start"
+        exit 1
+    fi
+else
+    echo "Carla is already running"
 fi
 
-# Start qpwgraph
-echo "Starting qpwgraph..."
-nohup qpwgraph -a -x -m "/home/markf/.config/audio/pb1.qpwgraph" > /dev/null 2>&1 &
-QPWGRAPH_PID=$!
+# Start qpwgraph if not already running
+if ! is_running "qpwgraph"; then
+    echo "Starting qpwgraph..."
+    nohup qpwgraph -a -x -m "/home/markf/.config/audio/pb-no-carla.qpwgraph" > /dev/null 2>&1 &
+    QPWGRAPH_PID=$!
 
-# Check if qpwgraph started
-sleep 2
-if ! kill -0 $QPWGRAPH_PID 2>/dev/null; then
-    echo "ERROR: qpwgraph failed to start"
-    exit 1
+    # Check if qpwgraph started
+    sleep 2
+    if ! kill -0 $QPWGRAPH_PID 2>/dev/null; then
+        echo "ERROR: qpwgraph failed to start"
+        exit 1
+    fi
+else
+    echo "qpwgraph is already running"
 fi
 
-echo "Audio graph started successfully"
+echo "Audio graph setup completed successfully"
