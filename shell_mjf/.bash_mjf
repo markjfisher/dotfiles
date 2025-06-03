@@ -2,15 +2,30 @@
 
 alias ll="ls -laF"
 alias vi="vim"
+alias clear-kitty="printf '\033[2J\033[3J\033[1;1H'"
+
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH="$1:$PATH"
+        return 0  # success
+    fi
+    return 1  # directory doesn't exist or path already added
+}
 
 if [[ -z "${SSH_CONNECTION}" ]]; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
 
+# add paths
+pathadd "$HOME/.cargo/bin"
+pathadd "$HOME/.local/bin"
+
+# 8 bit setup
+
+# on arch we have a system script to run via wine
+export ALTIRRA_BIN=altirra
+
+
 # starship terminal prompt
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init bash)"
-
-export PATH=$PATH:$HOME/.local/bin
-alias ma="$HOME/.local/bin/start-audio-graph.sh"
-

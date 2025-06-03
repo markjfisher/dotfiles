@@ -2,56 +2,24 @@
 <patchbay name="pb1" version="0.9.2">
  <items>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ZL Equalizer" port="ZL Equalizer:Audio Out 1"/>
-   <input node="Microphone Input" port="Microphone Input:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-midi">
-   <output node="Midi-Bridge" port="LPK25:LPK25 MIDI 1"/>
-   <input node="REAPER" port="REAPER:MIDI Input 3"/>
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="Carla" port="Carla:audio-in2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Carla-Patchbay" port="Carla-Patchbay:input_2"/>
+   <output node="Google Chrome-1" port="Google Chrome:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="OBS-2" port="OBS:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
-   <input node="Chromium input-1" port="Chromium input:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="zynaddsubfx" port="zynaddsubfx:out_2"/>
+   <output node="ZynAddSubFX" port="ZynAddSubFX:output_2"/>
    <input node="Music Audio" port="Music Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="OBS-2" port="OBS:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
-   <input node="Master Gain" port="Master Gain:input_2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Music Audio" port="Music Audio:monitor_FL"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Microphone Input" port="Microphone Input:capture_FR"/>
-   <input node="Calf Equalizer 12 Band" port="Calf Equalizer 12 Band:In R"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="ZL Equalizer" port="ZL Equalizer:Audio In 2"/>
+   <input node="ZL Equalizer" port="ZL Equalizer:Audio In 1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Left)"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
+   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
+   <input node="Chromium input-1" port="Chromium input:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Mix" port="Master Mix:monitor_FL"/>
@@ -79,35 +47,39 @@
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="Carla" port="Carla:audio-in2"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome-1" port="Google Chrome:output_FL"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+   <output node="SDL Application" port="SDL Application:output_FR"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ZynAddSubFX" port="ZynAddSubFX:output_2"/>
-   <input node="Music Audio" port="Music Audio:playback_FR"/>
+   <output node="Games Audio" port="Games Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="ZL Equalizer" port="ZL Equalizer:Audio In 1"/>
+   <output node="SDL Application" port="SDL Application:output_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Music Audio" port="Music Audio:monitor_FR"/>
    <input node="Master Gain" port="Master Gain:input_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
+   <input node="Mic boost for rec" port="Mic boost for rec:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="PipeWire ALSA [chrome]/ALSA Playback [chrome]" port="ALSA Playback [chrome]:output_FL"/>
    <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
+   <output node="Chromium-1" port="Chromium:output_FR"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Games Audio" port="Games Audio:monitor_FL"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
+   <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Left)"/>
+   <input node="StereoRecord" port="StereoRecord:In"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="ZL Equalizer" port="ZL Equalizer:Audio Out 2"/>
@@ -118,16 +90,212 @@
    <input node="130:MIDI In" port="0:in"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="StereoRecord" port="StereoRecord:In"/>
+   <output node="ZL Equalizer" port="ZL Equalizer:Audio Out 2"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-4" port="Chromium:output_FL"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Microphone Input" port="Microphone Input:capture_FL"/>
    <input node="REAPER" port="REAPER:in1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ZL Equalizer" port="ZL Equalizer:Audio Out 2"/>
-   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-midi">
+   <output node="Midi-Bridge" port="LPK25:LPK25 MIDI 1"/>
+   <input node="REAPER" port="REAPER:MIDI Input 3"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Carla-Patchbay" port="Carla-Patchbay:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ZL Equalizer" port="ZL Equalizer:Audio Out 1"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FR"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="OBS-2" port="OBS:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Chromium input-1" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="zynaddsubfx" port="zynaddsubfx:out_2"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="OBS-2" port="OBS:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
+   <input node="Mic boost for rec" port="Mic boost for rec:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Audio" port="Music Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
+   <input node="Chromium input-1" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FR"/>
+   <input node="Chromium input" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FR"/>
+   <input node="Calf Equalizer 12 Band" port="Calf Equalizer 12 Band:In R"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="ZL Equalizer" port="ZL Equalizer:Audio In 2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Audio Gain (Stereo)" port="Audio Gain (Stereo):output_2"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Right)"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Mic boost for rec" port="Mic boost for rec:output_2"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Right)"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="Carla-1" port="Carla:audio-in2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Chromium input-1" port="Chromium input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ZynAddSubFX" port="ZynAddSubFX:output_1"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Big Meter" port="Big Meter:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
+   <input node="LSP Spectrum Analyzer x2" port="LSP Spectrum Analyzer x2:Input 0"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Test Microphone" port="Test Microphone:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
+   <input node="Audio Gain (Stereo)" port="Audio Gain (Stereo):input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-1" port="Chromium:output_FL"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Carla-Patchbay" port="Carla-Patchbay:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
+   <input node="Calf Equalizer 12 Band" port="Calf Equalizer 12 Band:In L"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="zynaddsubfx" port="zynaddsubfx:out_1"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [chrome]/ALSA Playback [chrome]" port="ALSA Playback [chrome]:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Chromium input" port="Chromium input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Gain" port="Master Gain:output_2"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ZL Equalizer" port="ZL Equalizer:Audio Out 1"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="Carla-1" port="Carla:audio-in1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Big Meter" port="Big Meter:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium" port="Chromium:output_FR"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FR"/>
+   <input node="LSP Spectrum Analyzer x2" port="LSP Spectrum Analyzer x2:Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="SonivoxEAS" port="SonivoxEAS:output_FR"/>
+   <input node="REAPER" port="REAPER:in4"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-midi">
+   <output node="Midi-Bridge" port="LPK25:LPK25 MIDI 1"/>
+   <input node="REAPER" port="REAPER:MIDI Input 1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Mix" port="Master Mix:monitor_FL"/>
@@ -154,20 +322,28 @@
    <input node="Discord Audio" port="Discord Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
+   <input node="Audio Gain (Stereo)" port="Audio Gain (Stereo):input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Right)"/>
-   <input node="Master Gain" port="Master Gain:input_2"/>
+   <input node="StereoRecord" port="StereoRecord:In1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="SonivoxEAS" port="SonivoxEAS:output_FR"/>
-   <input node="REAPER" port="REAPER:in4"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-midi">
-   <output node="Midi-Bridge" port="LPK25:LPK25 MIDI 1"/>
-   <input node="REAPER" port="REAPER:MIDI Input 1"/>
+   <output node="Chromium-4" port="Chromium:output_FR"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FL"/>
-   <input node="ZL Equalizer" port="ZL Equalizer:Audio In 1"/>
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Chromium input" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
+   <input node="Chromium input" port="Chromium input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Audio Gain (Stereo)" port="Audio Gain (Stereo):output_1"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
@@ -178,8 +354,8 @@
    <input node="Master Gain" port="Master Gain:input_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
-   <input node="Chromium input" port="Chromium input:input_FR"/>
+   <output node="Google Chrome-1" port="Google Chrome:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Gain" port="Master Gain:output_1"/>
@@ -190,116 +366,12 @@
    <input node="OBS" port="OBS:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Games Audio" port="Games Audio:monitor_FR"/>
-   <input node="Master Gain" port="Master Gain:input_2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome-1" port="Google Chrome:output_FR"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome" port="Google Chrome:output_FL"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="Carla-1" port="Carla:audio-in2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <output node="Mic boost for rec" port="Mic boost for rec:output_1"/>
    <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Test Microphone" port="Test Microphone:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="StereoRecord" port="StereoRecord:In1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Carla-Patchbay" port="Carla-Patchbay:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
-   <input node="Calf Equalizer 12 Band" port="Calf Equalizer 12 Band:In L"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="Chromium input-1" port="Chromium input:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ZynAddSubFX" port="ZynAddSubFX:output_1"/>
-   <input node="Music Audio" port="Music Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome" port="Google Chrome:output_FR"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
-   <input node="Big Meter" port="Big Meter:input_2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
-   <input node="LSP Spectrum Analyzer x2" port="LSP Spectrum Analyzer x2:Input 0"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PipeWire ALSA [chrome]/ALSA Playback [chrome]" port="ALSA Playback [chrome]:output_FR"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="Chromium input" port="Chromium input:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Gain" port="Master Gain:output_2"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="zynaddsubfx" port="zynaddsubfx:out_1"/>
-   <input node="Music Audio" port="Music Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FR"/>
-   <input node="ZL Equalizer" port="ZL Equalizer:Audio In 2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="Big Meter" port="Big Meter:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium" port="Chromium:output_FR"/>
-   <input node="Discord Audio" port="Discord Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Microphone Input" port="Microphone Input:capture_FR"/>
-   <input node="LSP Spectrum Analyzer x2" port="LSP Spectrum Analyzer x2:Input 1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ZL Equalizer" port="ZL Equalizer:Audio Out 1"/>
-   <input node="Discord Microphone" port="Discord Microphone:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="Carla-1" port="Carla:audio-in1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
-   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FR"/>
+   <output node="Games Audio" port="Games Audio:monitor_FR"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
   </item>
  </items>
 </patchbay>
