@@ -24,7 +24,7 @@ pathadd "$HOME/.local/bin"
 
 # on arch we have a system script to run via wine
 export ALTIRRA_BIN=altirra
-
+export ATARI800_HOME=/home/markf/dev/atari/atari800/src
 
 # starship terminal prompt
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
