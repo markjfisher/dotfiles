@@ -20,11 +20,23 @@ fi
 pathadd "$HOME/.cargo/bin"
 pathadd "$HOME/.local/bin"
 
+
 # 8 bit setup
 
 # on arch we have a system script to run via wine
 export ALTIRRA_BIN=altirra
 export ATARI800_HOME=/home/markf/dev/atari/atari800/src
+
+## watcom for msdos fujinet-lib
+export WATCOM=/opt/watcom
+pathadd "$WATCOM/binl64"
+pathadd "$WATCOM/binl"
+export EDPATH=$WATCOM/eddat
+export INCLUDE=$WATCOM/h
+
+## ORCA/GoldenGate for apple2gs compilation
+export GOLDEN_GATE=$HOME/8bin/GoldenGate
+pathadd "$GOLDEN_GATE/bin"
 
 # starship terminal prompt
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
