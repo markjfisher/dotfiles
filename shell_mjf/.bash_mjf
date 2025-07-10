@@ -38,6 +38,9 @@ export INCLUDE=$WATCOM/h
 export GOLDEN_GATE=$HOME/8bin/GoldenGate
 pathadd "$GOLDEN_GATE/bin"
 
+# cursor hack
+[[ "$TERM_PROGRAM" == "vscode" ]] && unset ARGV0
+
 # starship terminal prompt
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init bash)"
