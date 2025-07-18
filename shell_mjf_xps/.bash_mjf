@@ -12,6 +12,14 @@ pathadd() {
     return 1  # directory doesn't exist or path already added
 }
 
+pathadd_end() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH="$PATH:$1"
+        return 0  # success
+    fi
+    return 1  # directory doesn't exist or path already added
+}
+
 if [[ -z "${SSH_CONNECTION}" ]]; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
@@ -24,14 +32,28 @@ pathadd "$HOME/.local/bin"
 
 # on arch we have a system script to run via wine
 export ALTIRRA_BIN=altirra
+export ATARI800_HOME=/home/markf/dev/atari/atari800/src
 
+## watcom for msdos fujinet-lib
+export WATCOM=/opt/watcom
+pathadd_end "$WATCOM/binl64"
+pathadd_end "$WATCOM/binl"
+export EDPATH=$WATCOM/eddat
+export INCLUDE=$WATCOM/h
 
-# starship terminal prompt
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init bash)"
+## ORCA/GoldenGate for apple2gs compilation
+export GOLDEN_GATE=$HOME/8bin/GoldenGate
+pathadd "$GOLDEN_GATE/bin"
 
 # some Dell grx driver setup after getting white screen on cursor and chrome
 # suggested by Cursor
 export LIBVA_DRIVER_NAME=iHD
 export VDPAU_DRIVER=va_gl
+
+# starship terminal prompt
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+eval "$(starship init bash)"
+
+# can't get away from node
+source /usr/share/nvm/init-nvm.sh
 
