@@ -38,10 +38,6 @@
    <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
-   <input node="Recorder Sink" port="Recorder Sink:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Google Chrome-1" port="Google Chrome:output_FL"/>
    <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
   </item>
@@ -50,8 +46,8 @@
    <input node="Master Mix" port="Master Mix:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
+   <output node="Microphone Input" port="Microphone Input:capture_FR"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Games Audio" port="Games Audio:monitor_FL"/>
@@ -63,15 +59,15 @@
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
-   <input node="Recorder Sink" port="Recorder Sink:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
    <input node="Master Mix" port="Master Mix:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Music Audio" port="Music Audio:monitor_FL"/>
    <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
@@ -82,12 +78,12 @@
    <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Compressor Output" port="Discord Compressor Output:capture_FR"/>
-   <input node="Recorder Sink" port="Recorder Sink:playback_FR"/>
+   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
+   <output node="Discord Compressor Output" port="Discord Compressor Output:capture_FR"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
@@ -124,6 +120,10 @@
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Desktop Audio" port="Desktop Audio:monitor_FR"/>
    <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Mix" port="Master Mix:monitor_FL"/>
