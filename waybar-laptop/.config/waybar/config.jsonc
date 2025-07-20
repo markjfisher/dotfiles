@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "memory"],
     "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "hyprland/language", "network", "bluetooth", "battery", "tray"],
+    "modules-right": ["custom/master-gain", "hyprland/language", "network", "bluetooth", "battery", "tray"],
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
@@ -30,10 +30,15 @@
         "format": "{:%d.%m.%Y | %H:%M}"
     },
 
-    "wireplumber": {
-        "format": "\udb81\udd7e  {volume}%",
-        "max-volume": 100,
-        "scroll-step": 2
+    "custom/master-gain": {
+        "format": "\udb81\udd7e ({}) ",
+        "exec": "~/.local/bin/master-gain-control.sh current-fast | xargs printf '%.2f'",
+        "interval": 2,
+        "tooltip": true,
+        "tooltip-format": "Master Gain Control\nClick: Reset to Unity\nScroll: Adjust gain",
+        "on-click": "~/.local/bin/master-gain-control.sh reset",
+        "on-scroll-up": "~/.local/bin/master-gain-control.sh +1",
+        "on-scroll-down": "~/.local/bin/master-gain-control.sh -1"
     },
 
     "memory": {

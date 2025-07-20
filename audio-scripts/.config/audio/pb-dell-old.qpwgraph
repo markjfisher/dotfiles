@@ -1,0 +1,94 @@
+<!DOCTYPE patchbay>
+<patchbay name="pb-dell-old" version="0.9.4">
+ <items>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Built-in Audio Analog Stereo" port="ALC3266 Analog:capture_FR"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Audio" port="Music Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Built-in Audio Analog Stereo" port="ALC3266 Analog:capture_FR"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Audio" port="Music Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Gain Output" port="Master Gain Output:capture_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC3266 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome-1" port="Google Chrome:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="Master Gain Input" port="Master Gain Input:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="Master Gain Input" port="Master Gain Input:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Built-in Audio Analog Stereo" port="ALC3266 Analog:capture_FL"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio" port="Games Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Built-in Audio Analog Stereo" port="ALC3266 Analog:capture_FL"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Gain Output" port="Master Gain Output:capture_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC3266 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome-1" port="Google Chrome:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio" port="Games Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+ </items>
+</patchbay>
+
