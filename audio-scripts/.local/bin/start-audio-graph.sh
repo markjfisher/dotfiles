@@ -3,6 +3,10 @@
 # Set up logging
 exec 1> >(logger -s -t $(basename $0)) 2>&1
 
+# Get the current hostname
+HOSTNAME=$(hostname)
+echo "Running on hostname: $HOSTNAME"
+
 # Check if DISPLAY is set
 if [ -z "$DISPLAY" ]; then
     echo "ERROR: DISPLAY environment variable not set"
@@ -26,10 +30,25 @@ is_running() {
     return $?
 }
 
+# Define hostname-specific configuration paths
+CARLA_CONFIG="/home/markf/.config/audio/main-${HOSTNAME}.carxp"
+QPWGRAPH_CONFIG="/home/markf/.config/audio/pb-${HOSTNAME}.qpwgraph"
+
+# Check if configuration files exist
+if [ ! -f "$CARLA_CONFIG" ]; then
+    echo "ERROR: Carla configuration file not found: $CARLA_CONFIG"
+    exit 1
+fi
+
+if [ ! -f "$QPWGRAPH_CONFIG" ]; then
+    echo "ERROR: qpwgraph configuration file not found: $QPWGRAPH_CONFIG"
+    exit 1
+fi
+
 # Start Carla if not already running
-if ! is_running "carla.*main.carxp"; then
-    echo "Starting Carla..."
-    carla "/home/markf/.config/audio/main.carxp" > /dev/null 2>&1 &
+if ! is_running "carla.*main-${HOSTNAME}.carxp"; then
+    echo "Starting Carla with config: $CARLA_CONFIG"
+    carla "$CARLA_CONFIG" > /dev/null 2>&1 &
     CARLA_PID=$!
 
     # Give Carla time to start
@@ -46,8 +65,8 @@ fi
 
 # Start qpwgraph if not already running
 if ! is_running "qpwgraph"; then
-    echo "Starting qpwgraph..."
-    nohup qpwgraph -a -x -m "/home/markf/.config/audio/pb-no-carla.qpwgraph" > /dev/null 2>&1 &
+    echo "Starting qpwgraph with config: $QPWGRAPH_CONFIG"
+    nohup qpwgraph -a -x -m "$QPWGRAPH_CONFIG" > /dev/null 2>&1 &
     QPWGRAPH_PID=$!
 
     # Check if qpwgraph started

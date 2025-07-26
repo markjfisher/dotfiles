@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- LoudMax Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LADSPA</Type>
+   <Name>Discord LM Compressor</Name>
+   <Binary>/usr/lib/ladspa/la_LoudMax64.so</Binary>
+   <Label>ldmx_stereo</Label>
+   <UniqueID>5502</UniqueID>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Threshold</Name>
+    <Value>-20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Output</Name>
+    <Value>-5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Inter-Sample Peaks</Name>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- True-Peak and RMS Meter (Stereo) -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>True-Peak and RMS Meter (Stereo)</Name>
+   <URI>http://gareus.org/oss/lv2/meters#TPnRMSstereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Reset</Name>
+    <Symbol>reset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Carla-Rack -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Mic Double Gain</Name>
+   <URI>http://kxstudio.sf.net/carla/plugins/carlarack</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://kxstudio.sf.net/ns/carla/chunk</Key>
+    <Value>
+&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;!DOCTYPE CARLA-PROJECT&gt;
+&lt;CARLA-PROJECT VERSION=&apos;2.5&apos;&gt;
+ &lt;EngineSettings&gt;
+  &lt;ForceStereo&gt;false&lt;/ForceStereo&gt;
+  &lt;PreferPluginBridges&gt;false&lt;/PreferPluginBridges&gt;
+  &lt;PreferUiBridges&gt;true&lt;/PreferUiBridges&gt;
+  &lt;UIsAlwaysOnTop&gt;false&lt;/UIsAlwaysOnTop&gt;
+  &lt;MaxParameters&gt;200&lt;/MaxParameters&gt;
+  &lt;UIBridgesTimeout&gt;4000&lt;/UIBridgesTimeout&gt;
+  &lt;LADSPA_PATH&gt;/home/markf/.ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa&lt;/LADSPA_PATH&gt;
+  &lt;DSSI_PATH&gt;/home/markf/.dssi:/usr/lib/dssi:/usr/local/lib/dssi&lt;/DSSI_PATH&gt;
+  &lt;LV2_PATH&gt;/home/markf/.lv2:/usr/lib/lv2:/usr/local/lib/lv2&lt;/LV2_PATH&gt;
+  &lt;VST2_PATH&gt;/home/markf/.vst:/usr/lib/vst:/usr/local/lib/vst/home/markf/.lxvst:/usr/lib/lxvst:/usr/local/lib/lxvst:/home/markf/.wine/drive_c/Program Files/VstPlugins:/home/markf/.wine/drive_c/Program Files (x86)/VstPlugins&lt;/VST2_PATH&gt;
+  &lt;VST3_PATH&gt;/home/markf/.vst3:/usr/lib/vst3:/usr/local/lib/vst3:/home/markf/.wine/drive_c/Program Files/Common Files/VST3:/home/markf/.wine/drive_c/Program Files (x86)/Common Files/VST3&lt;/VST3_PATH&gt;
+  &lt;SF2_PATH&gt;/home/markf/.sounds/sf2:/home/markf/.sounds/sf3:/usr/share/sounds/sf2:/usr/share/sounds/sf3:/usr/share/soundfonts&lt;/SF2_PATH&gt;
+  &lt;SFZ_PATH&gt;/home/markf/.sounds/sfz:/usr/share/sounds/sfz&lt;/SFZ_PATH&gt;
+  &lt;JSFX_PATH&gt;/home/markf/.config/REAPER/Effects&lt;/JSFX_PATH&gt;
+ &lt;/EngineSettings&gt;
+
+ &lt;!-- Audio Gain (Stereo) --&gt;
+ &lt;Plugin&gt;
+  &lt;Info&gt;
+   &lt;Type&gt;LV2&lt;/Type&gt;
+   &lt;Name&gt;Audio Gain (Stereo)&lt;/Name&gt;
+   &lt;URI&gt;http://kxstudio.sf.net/carla/plugins/audiogain_s&lt;/URI&gt;
+  &lt;/Info&gt;
+
+  &lt;Data&gt;
+   &lt;Active&gt;Yes&lt;/Active&gt;
+   &lt;Volume&gt;1.155637&lt;/Volume&gt;
+   &lt;ControlChannel&gt;1&lt;/ControlChannel&gt;
+   &lt;Options&gt;0x4&lt;/Options&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;1&lt;/Index&gt;
+    &lt;Name&gt;Gain&lt;/Name&gt;
+    &lt;Symbol&gt;gain&lt;/Symbol&gt;
+    &lt;Value&gt;2.2254900932312&lt;/Value&gt;
+   &lt;/Parameter&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;2&lt;/Index&gt;
+    &lt;Name&gt;Apply Left&lt;/Name&gt;
+    &lt;Symbol&gt;apply_left&lt;/Symbol&gt;
+    &lt;Value&gt;1&lt;/Value&gt;
+   &lt;/Parameter&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;3&lt;/Index&gt;
+    &lt;Name&gt;Apply Right&lt;/Name&gt;
+    &lt;Symbol&gt;apply_right&lt;/Symbol&gt;
+    &lt;Value&gt;1&lt;/Value&gt;
+   &lt;/Parameter&gt;
+
+   &lt;CustomData&gt;
+    &lt;Type&gt;http://kxstudio.sf.net/ns/carla/property&lt;/Type&gt;
+    &lt;Key&gt;CarlaSkinIsCompacted&lt;/Key&gt;
+    &lt;Value&gt;false&lt;/Value&gt;
+   &lt;/CustomData&gt;
+  &lt;/Data&gt;
+ &lt;/Plugin&gt;
+
+ &lt;!-- Audio Gain (Stereo) --&gt;
+ &lt;Plugin&gt;
+  &lt;Info&gt;
+   &lt;Type&gt;LV2&lt;/Type&gt;
+   &lt;Name&gt;Audio Gain (Stereo) (2)&lt;/Name&gt;
+   &lt;URI&gt;http://kxstudio.sf.net/carla/plugins/audiogain_s&lt;/URI&gt;
+  &lt;/Info&gt;
+
+  &lt;Data&gt;
+   &lt;Active&gt;Yes&lt;/Active&gt;
+   &lt;Volume&gt;1.143186&lt;/Volume&gt;
+   &lt;ControlChannel&gt;1&lt;/ControlChannel&gt;
+   &lt;Options&gt;0x4&lt;/Options&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;1&lt;/Index&gt;
+    &lt;Name&gt;Gain&lt;/Name&gt;
+    &lt;Symbol&gt;gain&lt;/Symbol&gt;
+    &lt;Value&gt;2.5&lt;/Value&gt;
+   &lt;/Parameter&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;2&lt;/Index&gt;
+    &lt;Name&gt;Apply Left&lt;/Name&gt;
+    &lt;Symbol&gt;apply_left&lt;/Symbol&gt;
+    &lt;Value&gt;1&lt;/Value&gt;
+   &lt;/Parameter&gt;
+
+   &lt;Parameter&gt;
+    &lt;Index&gt;3&lt;/Index&gt;
+    &lt;Name&gt;Apply Right&lt;/Name&gt;
+    &lt;Symbol&gt;apply_right&lt;/Symbol&gt;
+    &lt;Value&gt;1&lt;/Value&gt;
+   &lt;/Parameter&gt;
+  &lt;/Data&gt;
+ &lt;/Plugin&gt;
+&lt;/CARLA-PROJECT&gt;
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>Clarett 4Pre USB Multichannel:capture_AUX0</Source>
+   <Target>Mic Double Gain:Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Clarett 4Pre USB Multichannel:capture_AUX0</Source>
+   <Target>Mic Double Gain:Audio Input 2</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Gain Output:capture_FL</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Gain Output:capture_FR</Source>
+   <Target>Clarett 4Pre USB Analog Surround 7.1:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord LM Compressor:Output (Left)</Source>
+   <Target>Recorder Sink:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord LM Compressor:Output (Right)</Source>
+   <Target>Recorder Sink:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>ESO:output_FL</Source>
+   <Target>Games Audio:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>ESO:output_FR</Source>
+   <Target>Games Audio:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Mic Double Gain:Audio Output 1</Source>
+   <Target>Microphone Input:input_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Mic Double Gain:Audio Output 1</Source>
+   <Target>Discord Microphone:input_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Mic Double Gain:Audio Output 2</Source>
+   <Target>Microphone Input:input_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Mic Double Gain:Audio Output 2</Source>
+   <Target>Discord Microphone:input_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Games Audio:monitor_FL</Source>
+   <Target>Master Mix:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Games Audio:monitor_FR</Source>
+   <Target>Master Mix:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Music Audio:monitor_FL</Source>
+   <Target>Master Mix:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Music Audio:monitor_FR</Source>
+   <Target>Master Mix:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Desktop Audio:monitor_FL</Source>
+   <Target>Master Mix:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Desktop Audio:monitor_FR</Source>
+   <Target>Master Mix:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Chrome Audio:monitor_FL</Source>
+   <Target>Master Mix:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Chrome Audio:monitor_FL</Source>
+   <Target>Discord LM Compressor:Input (Left)</Target>
+  </Connection>
+  <Connection>
+   <Source>Chrome Audio:monitor_FR</Source>
+   <Target>Master Mix:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Chrome Audio:monitor_FR</Source>
+   <Target>Discord LM Compressor:Input (Right)</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord Audio:monitor_FL</Source>
+   <Target>Master Mix:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord Audio:monitor_FL</Source>
+   <Target>Discord LM Compressor:Input (Left)</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord Audio:monitor_FR</Source>
+   <Target>Master Mix:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Discord Audio:monitor_FR</Source>
+   <Target>Discord LM Compressor:Input (Right)</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Mix:monitor_FL</Source>
+   <Target>Master Gain Input:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Master Mix:monitor_FR</Source>
+   <Target>Master Gain Input:playback_FR</Target>
+  </Connection>
+  <Positions>
+   <Position x1="79" y1="636" x2="2068" y2="1274">
+    <Name>Clarett 4Pre USB Multichannel</Name>
+   </Position>
+   <Position x1="822" y1="123" x2="2110" y2="1348">
+    <Name>Game Capture HD60 X Analog Stereo</Name>
+   </Position>
+   <Position x1="994" y1="890">
+    <Name>Master Gain Output</Name>
+   </Position>
+   <Position x1="146" y1="400">
+    <Name>ESO</Name>
+   </Position>
+   <Position x1="380" y1="229">
+    <Name>Games Audio</Name>
+   </Position>
+   <Position x1="51" y1="157" x2="1254" y2="888">
+    <Name>Clarett 4Pre USB Analog Surround 7.1</Name>
+   </Position>
+   <Position x1="665" y1="48" x2="1090" y2="49">
+    <Name>AD104 High Definition Audio Controller Digital Stereo (HDMI)</Name>
+   </Position>
+   <Position x1="380" y1="156">
+    <Name>Null Audio</Name>
+   </Position>
+   <Position x1="377" y1="301">
+    <Name>Music Audio</Name>
+   </Position>
+   <Position x1="379" y1="372">
+    <Name>Desktop Audio</Name>
+   </Position>
+   <Position x1="383" y1="444">
+    <Name>Chrome Audio</Name>
+   </Position>
+   <Position x1="382" y1="522">
+    <Name>Discord Audio</Name>
+   </Position>
+   <Position x1="985" y1="307">
+    <Name>Master Mix</Name>
+   </Position>
+   <Position x1="1311" y1="505">
+    <Name>Recorder Sink</Name>
+   </Position>
+   <Position x1="688" y1="712">
+    <Name>Microphone Input</Name>
+   </Position>
+   <Position x1="685" y1="627">
+    <Name>Discord Microphone</Name>
+   </Position>
+   <Position x1="1364" y1="305">
+    <Name>Master Gain Input</Name>
+   </Position>
+   <Position x1="1556" y1="76" x2="1554" y2="203">
+    <Name>Midi-Bridge</Name>
+   </Position>
+   <Position x1="1556" y1="150" x2="1665" y2="151">
+    <Name>BLE MIDI 1</Name>
+   </Position>
+   <Position x1="1004" y1="495" pluginId="0">
+    <Name>Discord LM Compressor</Name>
+   </Position>
+   <Position x1="1771" y1="473" pluginId="1">
+    <Name>True-Peak and RMS Meter (Stereo)</Name>
+   </Position>
+   <Position x1="384" y1="634" pluginId="2">
+    <Name>Mic Double Gain</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
