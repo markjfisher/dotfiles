@@ -1,0 +1,22 @@
+[alias]
+   st = status
+   hist = !sh -c 'git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short -${1:-20} ${2:-HEAD}' -
+   amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+   dr  = "!f() { git diff "$1"^.."$1" ${2:-}; }; f"
+   lc  = "!f() { git ll "$1"^.."$1" ${2:-}; }; f"
+
+[user]
+	name = Mark Fisher
+	email = mark.j.fisher@gmail.com
+[core]
+	excludesfile = /home/markf/.gitignore_global
+	abbrev = 8
+[color]
+	ui = always
+[color "diff"]
+	new = blue
+	old = red
+	meta = white dim
+	context = normal
