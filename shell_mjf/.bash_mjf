@@ -34,7 +34,7 @@ pathadd "$HOME/.local/bin"
 # on arch we have a system script to run via wine
 export ALTIRRA_BIN=altirra
 export ATARI800_HOME=/home/markf/dev/atari/atari800/src
-export PIO_VENV_ROOT=~/.platformio/penv/.espidf-5.4.0
+export VENV_ROOT=~/.platformio/penv/.espidf-5.4.0
 
 ## watcom for msdos fujinet-lib
 export WATCOM=/opt/watcom

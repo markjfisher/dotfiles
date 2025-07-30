@@ -66,7 +66,7 @@ fi
 # Start qpwgraph if not already running
 if ! is_running "qpwgraph"; then
     echo "Starting qpwgraph with config: $QPWGRAPH_CONFIG"
-    nohup qpwgraph -a -x -m "$QPWGRAPH_CONFIG" > /dev/null 2>&1 &
+    nohup qpwgraph -a -m "$QPWGRAPH_CONFIG" > /dev/null 2>&1 &
     QPWGRAPH_PID=$!
 
     # Check if qpwgraph started
