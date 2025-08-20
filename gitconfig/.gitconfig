@@ -1,6 +1,6 @@
 [alias]
    st = status
-   hist = !sh -c 'git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short -${1:-20} ${2:-HEAD}' -
+   hist = !sh -c 'git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short -${1:-5} ${2:-HEAD}' -
    amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
