@@ -79,15 +79,31 @@ fi
 
 # main or master branch name
 if [ "$UB_SPECIFIED" == "true" ] ; then
-  BR_MATCH="(\b$USER_BRANCH\b|\bmaster\b|\bmain\b)"
+  # Use the specified branch directly
+  M_BRANCH="$USER_BRANCH"
 else
+  # Auto-detect master/main branch
   BR_MATCH="(\bmaster\b|\bmain\b)"
+  M_BRANCH=$(git branch -v --no-color | sed 's#^\*# #' | awk '{print $1}' | grep -E "$BR_MATCH" | head -1)
 fi
-M_BRANCH=$(git branch -v --no-color | sed 's#^\*# #' | awk '{print $1}' | grep -E "$BR_MATCH" | head -1)
 
 if [ -z "$M_BRANCH" ] ; then
-  echo "Could not find branch to merge against. Used pattern: $BR_MATCH"
+  if [ "$UB_SPECIFIED" == "true" ] ; then
+    echo "Specified branch '$USER_BRANCH' not found locally."
+  else
+    echo "Could not find branch to merge against. Used pattern: $BR_MATCH"
+  fi
   exit 1
+fi
+
+# Verify the branch exists locally
+if [ "$UB_SPECIFIED" == "true" ] ; then
+  if ! git show-ref --verify --quiet refs/heads/$M_BRANCH; then
+    echo "Error: Local branch '$M_BRANCH' does not exist."
+    echo "Available branches:"
+    git branch --list
+    exit 1
+  fi
 fi
 
 # jumps to target branch if needed, fetches, merges and pushes latest changes to our
