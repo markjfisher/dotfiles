@@ -9,7 +9,16 @@ RECORDER_MONITOR="${RECORDER_SINK}.monitor"
 PID_FILE="/tmp/pipewire_recorder.pid"
 
 # MP3 encoding settings
-MP3_BITRATE="192"  # Change to 128, 192, 256, 320 as desired
+# 1. Original settings, a little loud and slighly clipped:
+# MP3_QUALITY="-q:a 4 -ac 1 -af loudnorm=I=-16:LRA=11:TP=-1.5"
+# 2. skip normalization:
+# MP3_QUALITY="-q:a 4 -ac 1"
+
+# I=-25 is LUFS level, lower is quieter, a bit better than the old -16.
+# TP=-3 is the True Peak Ceiling (dBTP), more negative = more headroom, this gives slightly more than -1.5
+# LRA=11 is the Allowed Loudness Range. Not relevant to clipping
+MP3_QUALITY="-q:a 4 -ac 1 -af loudnorm=I=-25:LRA=11:TP=-3"
+
 AUTO_CONVERT_TO_MP3=false  # Set to true to automatically convert after recording
 
 # Recording parameters - make these configurable
@@ -263,8 +272,8 @@ convert_to_mp3() {
         return 1
     fi
     
-    echo "Converting to MP3 (${MP3_BITRATE}k)..."
-    ffmpeg -i "$wav_file" -b:a ${MP3_BITRATE}k "$mp3_file" -y
+    echo "Converting to MP3 (${MP3_QUALITY})..."
+    ffmpeg -i "$wav_file" -vn -map_metadata 0 -c:a libmp3lame ${MP3_QUALITY} "$mp3_file" -y
     
     if [ $? -eq 0 ]; then
         echo "MP3 created: $mp3_file"

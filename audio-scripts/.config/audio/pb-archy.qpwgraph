@@ -1,105 +1,517 @@
 <!DOCTYPE patchbay>
-<patchbay name="pb-archy" version="0.9.5">
+<patchbay name="pb-archy" version="1.0.3">
  <items>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FR"/>
-   <input node="Music Audio" port="Music Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla" port="Carla:audio-out2"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="wf-recorder3" port="wf-recorder3:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Microphone Input" port="Microphone Input:capture_FR"/>
-   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:outL"/>
-   <input node="True-Peak and RMS Meter (Stereo)-1" port="True-Peak and RMS Meter (Stereo):in1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Desktop Audio" port="Desktop Audio:monitor_FR"/>
-   <input node="Master Gain" port="Master Gain:input_2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
-   <input node="K20/RMS Meter (Stereo)" port="K20/RMS Meter (Stereo):inR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="wf-recorder3" port="wf-recorder3:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome-1" port="Google Chrome:output_FL"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="Carla" port="Carla:audio-in2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
-   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Right)"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Music Audio" port="Music Audio:monitor_FR"/>
-   <input node="Master Gain" port="Master Gain:input_2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="DOOM + DOOM II-1" port="DOOM + DOOM II:output_FL"/>
-   <input node="Games Audio" port="Games Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="SDL Application" port="SDL Application:output_FR"/>
+   <output node="Chromium-2" port="Chromium:output_FR"/>
    <input node="Games Audio" port="Games Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Audio Gain (Mono)" port="Audio Gain (Mono):Audio Output 1"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="Carla-1" port="Carla:audio-in2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Big Meter" port="Big Meter:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Chromium input-1" port="Chromium input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ZynAddSubFX" port="ZynAddSubFX:output_1"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="USB PnP Sound Device Mono" port="USB PnP Sound Device:capture_MONO"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Mic Double Gain" port="Mic Double Gain:Audio Input 1"/>
+   <input node="Carla-Patchbay" port="Carla-Patchbay:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Test Microphone" port="Test Microphone:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:outL"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
-   <input node="VU Meter (Stereo)" port="VU Meter (Stereo):inR"/>
+   <input node="Spectr" port="Spectr:in"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FR"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
+   <output node="zynaddsubfx" port="zynaddsubfx:out_1"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Desktop Audio" port="Desktop Audio:monitor_FR"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
+   <output node="Carla-Rack" port="Carla-Rack:Audio Output 2"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Music Audio" port="Music Audio:monitor_FL"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="Chromium input" port="Chromium input:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
-   <input node="K20/RMS Meter (Stereo)" port="K20/RMS Meter (Stereo):inL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Music Audio" port="Music Audio:monitor_FR"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX4"/>
+   <input node="Audio Gain (Stereo)" port="Audio Gain (Stereo):Audio Input 1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Carla-Patchbay" port="Carla-Patchbay:input_2"/>
+   <input node="Mic Double Gain" port="Mic Double Gain:Audio Input 2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="DOOM + DOOM II" port="DOOM + DOOM II:output_FL"/>
+   <output node="Atari Gain" port="Atari Gain:Audio Output 2"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="SDL Application" port="SDL Application:output_FL"/>
    <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="pw-record" port="pw-record:monitor_FL"/>
+   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):InL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FL"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-3" port="Chromium:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
+   <input node="Discord Mic Reduce" port="Discord Mic Reduce:Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Audio Gain (Stereo)" port="Audio Gain (Stereo):Audio Output 2"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Mic Double Gain" port="Mic Double Gain:Audio Output 2"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Audio Gain (Stereo)" port="Audio Gain (Stereo):Audio Output 1"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Compressor Output" port="Discord Compressor Output:capture_FR"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ESO" port="ESO:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome-2" port="Google Chrome:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Test Microphone" port="Test Microphone:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Altirra" port="Altirra:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [audacity]/ALSA Playback [audacity]" port="ALSA Playback [audacity]:output_FL"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla" port="Carla:audio-out1"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="Carla" port="Carla:audio-in1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):out2"/>
+   <input node="Simple Scope (4 channel)" port="Simple Scope (4 channel):in4"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-2" port="Chromium:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="True-Peak and RMS Meter (Stereo)-1" port="True-Peak and RMS Meter (Stereo):out1"/>
+   <input node="Simple Scope (4 channel)" port="Simple Scope (4 channel):in1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
+   <input node="discord-fx" port="discord-fx:Audio Input 2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Chromium input" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Atari Gain" port="Atari Gain:Audio Output 1"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Gain" port="Master Gain:Audio Output 2"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Audio" port="Music Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Gain" port="Master Gain:Audio Output 1"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
+   <input node="BBC M-6" port="BBC M-6:inL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="FMOD Audio" port="FMOD Audio:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium" port="Chromium:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="pw-record" port="pw-record:monitor_FR"/>
+   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):InR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Compressor Output" port="Discord Compressor Output:capture_FL"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
+   <input node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:inL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Beebium Linux" port="Beebium Linux:output_AUX0"/>
+   <input node="Null Audio" port="Null Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Audio Gain (Mono)" port="Audio Gain (Mono):Audio Output 1"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
+   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):in1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="EBU R128 Meter" port="EBU R128 Meter:outR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ZynAddSubFX" port="ZynAddSubFX:output_2"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Beebium Linux" port="Beebium Linux:output_AUX1"/>
+   <input node="Null Audio" port="Null Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="USB PnP Sound Device Mono" port="USB PnP Sound Device:capture_MONO"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):out1"/>
+   <input node="Simple Scope (4 channel)" port="Simple Scope (4 channel):in3"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Rack" port="Carla-Rack:Audio Output 1"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="OBS" port="OBS:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio" port="Games Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Altirra" port="Altirra:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [chrome]/ALSA Playback [chrome]" port="ALSA Playback [chrome]:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mic-boost-rn" port="mic-boost-rn:Audio Output 2"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="K20/RMS Meter (Stereo)" port="K20/RMS Meter (Stereo):outR"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="yoshimi" port="yoshimi:left"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="StarCraft II (Retail)-1" port="StarCraft II (Retail):output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mpv" port="mpv:output_FL"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-4" port="Chromium:output_FL"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Slack Audio" port="Slack Audio:monitor_FL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="ESO" port="ESO:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="DRL" port="DRL:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="StereoRecord" port="StereoRecord:In"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
+   <input node="Big Meter" port="Big Meter:Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="BrutalLegend.exe-1" port="BrutalLegend.exe:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FR"/>
+   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):InR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="noita.exe" port="noita.exe:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Line 5.6 Gain" port="Line 5.6 Gain:Audio Output 2"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <input node="discord-fx" port="discord-fx:Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="K20/RMS Meter (Stereo)" port="K20/RMS Meter (Stereo):outL"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Mic Double Gain" port="Mic Double Gain:Audio Output 1"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium" port="Chromium:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="io.github.celluloid_player.Celluloid" port="io.github.celluloid_player.Celluloid:output_FR"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="zynaddsubfx" port="zynaddsubfx:out_2"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="OBS-2" port="OBS:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
+   <input node="Chromium input-1" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="OBS-2" port="OBS:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
+   <input node="Discord Mic Reduce" port="Discord Mic Reduce:Audio Input 2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Punk.exe" port="Punk.exe:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [audacity]/ALSA Playback [audacity]" port="ALSA Playback [audacity]:output_FR"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="Master Gain Input" port="Master Gain Input:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:outR"/>
+   <input node="True-Peak and RMS Meter (Stereo)-1" port="True-Peak and RMS Meter (Stereo):in2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
+   <input node="DOOM + DOOM II" port="DOOM + DOOM II:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Left)"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mic-boost-rn" port="mic-boost-rn:Audio Output 1"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
+   <input node="meter" port="meter:Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-3" port="Chromium:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Slack Audio" port="Slack Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
+   <input node="VU Meter (Stereo)" port="VU Meter (Stereo):inL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX5"/>
+   <input node="Audio Gain (Stereo)" port="Audio Gain (Stereo):Audio Input 2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FR"/>
+   <input node="DOOM + DOOM II" port="DOOM + DOOM II:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="DOOM + DOOM II-1" port="DOOM + DOOM II:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="USB PnP Sound Device Mono" port="USB PnP Sound Device:capture_MONO"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="EBU R128 Meter" port="EBU R128 Meter:outL"/>
+   <input node="Master Mix" port="Master Mix:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="yoshimi" port="yoshimi:right"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
+   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FL"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-2" port="Chromium:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
+   <input node="meter-1" port="meter:Audio Input 2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome" port="Google Chrome:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mic-boost-rn" port="mic-boost-rn:Audio Output 1"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:outR"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Games Audio" port="Games Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="discord-fx" port="discord-fx:Audio Output 2"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Master Mix" port="Master Mix:monitor_FR"/>
+   <input node="StereoRecord" port="StereoRecord:In1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FL"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Audio Gain (Mono)" port="Audio Gain (Mono):Audio Output 1"/>
+   <input node="Microphone Input" port="Microphone Input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Aska.exe" port="Aska.exe:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
+   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):in2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Google Chrome-2" port="Google Chrome:output_FL"/>
@@ -138,18 +550,6 @@
    <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
-   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):in2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="Big Meter" port="Big Meter:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Mix" port="Master Mix:monitor_FL"/>
    <input node="Carla-1" port="Carla:audio-in1"/>
   </item>
@@ -162,68 +562,120 @@
    <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Slack Audio" port="Slack Audio:monitor_FL"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FL"/>
+   <input node="Big Meter" port="Big Meter:input_1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FL"/>
-   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome" port="Google Chrome:output_FL"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
-   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Left)"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="DOOM + DOOM II-1" port="DOOM + DOOM II:output_FR"/>
-   <input node="Games Audio" port="Games Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="USB PnP Sound Device Mono" port="USB PnP Sound Device:capture_MONO"/>
+   <output node="Carla-Rack" port="Carla-Rack:Audio Output 2"/>
    <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="EBU R128 Meter" port="EBU R128 Meter:outL"/>
-   <input node="Master Mix" port="Master Mix:playback_FL"/>
+   <output node="DOOM + DOOM II" port="DOOM + DOOM II:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
+   <input node="pw-record" port="pw-record:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="StereoRecord" port="StereoRecord:In1"/>
+   <output node="discord-fx" port="discord-fx:Audio Output 1"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FL"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
+   <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Right)"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:outR"/>
+   <output node="Discord Mic Reduce" port="Discord Mic Reduce:Audio Output 1"/>
+   <input node="discord-fx" port="discord-fx:Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
+   <input node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:inR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Aska.exe" port="Aska.exe:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-1" port="Chromium:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Slack Audio" port="Slack Audio:monitor_FR"/>
+   <input node="Recorder Sink" port="Recorder Sink:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Punk.exe" port="Punk.exe:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
    <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Games Audio" port="Games Audio:monitor_FR"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Carla-Rack" port="Carla-Rack:Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Mic Double Gain" port="Mic Double Gain:Audio Output 2"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-4" port="Chromium:output_FR"/>
+   <input node="Discord Audio" port="Discord Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
+   <input node="Spectr" port="Spectr:in"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Right)"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
+   <input node="meter-1" port="meter:Audio Input 1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Gain Output" port="Master Gain Output:capture_FL"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+   <input node="Master Gain" port="Master Gain:Audio Input 1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="Master Gain Input" port="Master Gain Input:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
    <input node="EBU R128 Meter" port="EBU R128 Meter:inL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="Master Gain Input" port="Master Gain Input:playback_FL"/>
+   <output node="Carla-Rack" port="Carla-Rack:Audio Output 1"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="USB PnP Sound Device Mono" port="USB PnP Sound Device:capture_MONO"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
+   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Google Chrome-1" port="Google Chrome:output_FR"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
+   <input node="BBC M-6" port="BBC M-6:inR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Games Audio" port="Games Audio:monitor_FR"/>
@@ -250,372 +702,180 @@
    <input node="Master Mix" port="Master Mix:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="USB PnP Sound Device Mono" port="USB PnP Sound Device:capture_MONO"/>
-   <input node="Microphone Input" port="Microphone Input:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
-   <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
-   <input node="BBC M-6" port="BBC M-6:inR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome-1" port="Google Chrome:output_FR"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium-1" port="Chromium:output_FR"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="DOOM + DOOM II" port="DOOM + DOOM II:output_FR"/>
-   <input node="Games Audio" port="Games Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
-   <input node="pw-record" port="pw-record:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Right)"/>
-   <input node="Master Gain" port="Master Gain:input_2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
-   <input node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:inR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
-   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Right)"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Mic Double Gain" port="Mic Double Gain:Audio Output 2"/>
-   <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium-4" port="Chromium:output_FR"/>
-   <input node="Discord Audio" port="Discord Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
-   <input node="Spectr" port="Spectr:in"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="StarCraft II (Retail)-1" port="StarCraft II (Retail):output_FR"/>
-   <input node="Games Audio" port="Games Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="K20/RMS Meter (Stereo)" port="K20/RMS Meter (Stereo):outR"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chrome Audio" port="Chrome Audio:monitor_FL"/>
-   <input node="Master Mix" port="Master Mix:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ESO" port="ESO:output_FL"/>
-   <input node="Games Audio" port="Games Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="StereoRecord" port="StereoRecord:In"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Gain Output" port="Master Gain Output:capture_FR"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium-4" port="Chromium:output_FL"/>
-   <input node="Discord Audio" port="Discord Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="USB PnP Sound Device Mono" port="USB PnP Sound Device:capture_MONO"/>
+   <output node="Audio Gain (Mono)" port="Audio Gain (Mono):Audio Output 1"/>
    <input node="Discord Microphone" port="Discord Microphone:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):out1"/>
-   <input node="Simple Scope (4 channel)" port="Simple Scope (4 channel):in3"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="OBS" port="OBS:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="EBU R128 Meter" port="EBU R128 Meter:outR"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ZynAddSubFX" port="ZynAddSubFX:output_2"/>
-   <input node="Music Audio" port="Music Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PipeWire ALSA [chrome]/ALSA Playback [chrome]" port="ALSA Playback [chrome]:output_FL"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Altirra" port="Altirra:output_FR"/>
-   <input node="Games Audio" port="Games Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Game Capture HD60 X Analog Stereo" port="Game Capture HD60 X:capture_FL"/>
+   <output node="BrutalLegend.exe-1" port="BrutalLegend.exe:output_FL"/>
    <input node="Games Audio" port="Games Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Games Audio" port="Games Audio:monitor_FL"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Audio" port="Discord Audio:monitor_FL"/>
-   <input node="Master Mix" port="Master Mix:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:outR"/>
-   <input node="True-Peak and RMS Meter (Stereo)-1" port="True-Peak and RMS Meter (Stereo):in2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Microphone Input" port="Microphone Input:capture_FL"/>
-   <input node="DOOM + DOOM II" port="DOOM + DOOM II:input_FL"/>
+   <output node="Google Chrome-1" port="Google Chrome:output_FL"/>
+   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="Master Gain Input" port="Master Gain Input:playback_FR"/>
+   <input node="Carla" port="Carla:audio-in2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
-   <input node="VU Meter (Stereo)" port="VU Meter (Stereo):inL"/>
+   <output node="Carla" port="Carla:audio-out2"/>
+   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX5"/>
-   <input node="Audio Gain (Stereo)" port="Audio Gain (Stereo):Audio Input 2"/>
+   <output node="Master Mix" port="Master Mix:monitor_FL"/>
+   <input node="wf-recorder3" port="wf-recorder3:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Game Capture HD60 X Analog Stereo" port="Game Capture HD60 X:capture_FR"/>
+   <output node="DRL" port="DRL:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="BrutalLegend.exe" port="BrutalLegend.exe:output_FR"/>
    <input node="Games Audio" port="Games Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Microphone Input" port="Microphone Input:capture_FR"/>
-   <input node="DOOM + DOOM II" port="DOOM + DOOM II:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord LM Compressor" port="Discord LM Compressor:Output (Left)"/>
-   <input node="Master Gain" port="Master Gain:input_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FR"/>
-   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):InR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
-   <input node="Chromium input-1" port="Chromium input:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="zynaddsubfx" port="zynaddsubfx:out_2"/>
-   <input node="Music Audio" port="Music Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="OBS-2" port="OBS:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="OBS-2" port="OBS:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chrome Audio" port="Chrome Audio:monitor_FR"/>
-   <input node="Master Gain" port="Master Gain:input_2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="K20/RMS Meter (Stereo)" port="K20/RMS Meter (Stereo):outL"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Mic Double Gain" port="Mic Double Gain:Audio Output 1"/>
-   <input node="Microphone Input" port="Microphone Input:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium" port="Chromium:output_FR"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="Chromium input" port="Chromium input:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX4"/>
-   <input node="Audio Gain (Stereo)" port="Audio Gain (Stereo):Audio Input 1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Mic Double Gain" port="Mic Double Gain:Audio Input 2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Atari Gain" port="Atari Gain:Audio Output 2"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:outL"/>
-   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
-   <input node="Spectr" port="Spectr:in"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="zynaddsubfx" port="zynaddsubfx:out_1"/>
-   <input node="Music Audio" port="Music Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
    <input node="PipeWire ALSA [audacity]/ALSA Capture [audacity]" port="ALSA Capture [audacity]:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="SDL Application" port="SDL Application:output_FL"/>
-   <input node="Games Audio" port="Games Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FL"/>
-   <input node="Music Audio" port="Music Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="pw-record" port="pw-record:monitor_FL"/>
-   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):InL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Master Mix" port="Master Mix:monitor_FR"/>
-   <input node="Carla-1" port="Carla:audio-in2"/>
+   <input node="wf-recorder3" port="wf-recorder3:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Carla-Patchbay" port="Carla-Patchbay:input_1"/>
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FR"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Test Microphone" port="Test Microphone:input_FR"/>
+   <output node="Discord Audio" port="Discord Audio:monitor_FR"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
-   <input node="Big Meter" port="Big Meter:input_2"/>
+   <output node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:outL"/>
+   <input node="True-Peak and RMS Meter (Stereo)-1" port="True-Peak and RMS Meter (Stereo):in1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ZynAddSubFX" port="ZynAddSubFX:output_1"/>
-   <input node="Music Audio" port="Music Audio:playback_FL"/>
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
+   <input node="K20/RMS Meter (Stereo)" port="K20/RMS Meter (Stereo):inR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome" port="Google Chrome:output_FR"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
+   <input node="Big Meter" port="Big Meter:Audio Input 2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_1"/>
-   <input node="Chromium input-1" port="Chromium input:input_FL"/>
+   <output node="Master Gain Output" port="Master Gain Output:capture_FR"/>
+   <input node="Master Gain" port="Master Gain:Audio Input 2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="USB PnP Sound Device Mono" port="USB PnP Sound Device:capture_MONO"/>
-   <input node="Microphone Input" port="Microphone Input:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Compressor Output" port="Discord Compressor Output:capture_FL"/>
-   <input node="Recorder Sink" port="Recorder Sink:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Microphone" port="Discord Microphone:capture_FL"/>
-   <input node="x42-dpl - Digital Peak Limiter Stereo" port="x42-dpl - Digital Peak Limiter Stereo:inL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="FMOD Audio" port="FMOD Audio:output_FL"/>
+   <output node="DOOM + DOOM II-1" port="DOOM + DOOM II:output_FL"/>
    <input node="Games Audio" port="Games Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium" port="Chromium:output_FL"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="pw-record" port="pw-record:monitor_FR"/>
-   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):InR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
-   <input node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):in1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Discord Compressor Output" port="Discord Compressor Output:capture_FR"/>
-   <input node="Recorder Sink" port="Recorder Sink:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="ESO" port="ESO:output_FR"/>
+   <output node="SDL Application" port="SDL Application:output_FR"/>
    <input node="Games Audio" port="Games Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Google Chrome-2" port="Google Chrome:output_FR"/>
-   <input node="Chrome Audio" port="Chrome Audio:playback_FR"/>
+   <output node="yoshimi" port="yoshimi:right"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
-   <input node="Test Microphone" port="Test Microphone:input_FL"/>
+   <output node="Discord Microphone" port="Discord Microphone:capture_FR"/>
+   <input node="Discord LM Compressor" port="Discord LM Compressor:Input (Right)"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla" port="Carla:audio-out1"/>
-   <input node="Clarett 4Pre USB Analog Surround 7.1" port="Clarett 4Pre USB:playback_FL"/>
+   <output node="Music Audio" port="Music Audio:monitor_FR"/>
+   <input node="Master Gain" port="Master Gain:input_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Master Mix" port="Master Mix:monitor_FL"/>
-   <input node="Carla" port="Carla:audio-in1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
-   <input node="Master Mix" port="Master Mix:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Audio Gain (Stereo)" port="Audio Gain (Stereo):Audio Output 2"/>
-   <input node="Master Mix" port="Master Mix:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Mic Double Gain" port="Mic Double Gain:Audio Output 2"/>
-   <input node="Microphone Input" port="Microphone Input:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Audio Gain (Stereo)" port="Audio Gain (Stereo):Audio Output 1"/>
-   <input node="Master Mix" port="Master Mix:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Altirra" port="Altirra:output_FL"/>
+   <output node="Line 5.6 Gain" port="Line 5.6 Gain:Audio Output 1"/>
    <input node="Games Audio" port="Games Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Music Audio" port="Music Audio:monitor_FL"/>
-   <input node="Master Mix" port="Master Mix:playback_FL"/>
+   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FR"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="True-Peak and RMS Meter (Stereo)" port="True-Peak and RMS Meter (Stereo):out2"/>
-   <input node="Simple Scope (4 channel)" port="Simple Scope (4 channel):in4"/>
+   <output node="mic-boost-rn" port="mic-boost-rn:Audio Output 2"/>
+   <input node="Discord Microphone" port="Discord Microphone:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="noita.exe" port="noita.exe:output_FR"/>
+   <input node="Games Audio" port="Games Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Carla-Patchbay" port="Carla-Patchbay:input_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mpv" port="mpv:output_FR"/>
+   <input node="Music Audio" port="Music Audio:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="yoshimi" port="yoshimi:left"/>
+   <input node="Microphone Input" port="Microphone Input:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Audio Gain (Mono)" port="Audio Gain (Mono):Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="DOOM + DOOM II" port="DOOM + DOOM II:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
+   <input node="VU Meter (Stereo)" port="VU Meter (Stereo):inR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VLC media player (LibVLC 3.0.21)" port="VLC media player (LibVLC 3.0.21):output_FR"/>
+   <input node="Discord Compressor Input" port="Discord Compressor Input:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Audio" port="Music Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Discord Mic Reduce" port="Discord Mic Reduce:Audio Output 2"/>
+   <input node="discord-fx" port="discord-fx:Audio Input 2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="Mic Double Gain" port="Mic Double Gain:Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Audio" port="Music Audio:monitor_FR"/>
+   <input node="Master Mix" port="Master Mix:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="BrutalLegend.exe" port="BrutalLegend.exe:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Clarett 4Pre USB Multichannel" port="Clarett 4Pre USB:capture_AUX0"/>
+   <input node="mic-boost-rn" port="mic-boost-rn:Audio Input 1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Recorder Sink" port="Recorder Sink:monitor_FR"/>
+   <input node="meter" port="meter:Audio Input 2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Recorder Sink" port="Recorder Sink:monitor_FL"/>
-   <input node="BBC M-6" port="BBC M-6:inL"/>
+   <input node="K20/RMS Meter (Stereo)" port="K20/RMS Meter (Stereo):inL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="True-Peak and RMS Meter (Stereo)-1" port="True-Peak and RMS Meter (Stereo):out1"/>
-   <input node="Simple Scope (4 channel)" port="Simple Scope (4 channel):in1"/>
+   <output node="Chromium-2" port="Chromium:output_FL"/>
+   <input node="Games Audio" port="Games Audio:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Carla-Patchbay" port="Carla-Patchbay:output_2"/>
-   <input node="Chromium input" port="Chromium input:input_FR"/>
+   <output node="Desktop Audio" port="Desktop Audio:monitor_FL"/>
+   <input node="Master Gain" port="Master Gain:input_1"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Atari Gain" port="Atari Gain:Audio Output 1"/>
-   <input node="Master Mix" port="Master Mix:playback_FL"/>
+   <output node="io.github.celluloid_player.Celluloid" port="io.github.celluloid_player.Celluloid:output_FL"/>
+   <input node="Music Audio" port="Music Audio:playback_FL"/>
   </item>
  </items>
 </patchbay>

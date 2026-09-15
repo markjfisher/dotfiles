@@ -45,6 +45,24 @@ if [ ! -f "$QPWGRAPH_CONFIG" ]; then
     exit 1
 fi
 
+# Start qpwgraph if not already running
+if ! is_running "qpwgraph"; then
+    echo "Starting qpwgraph with config: $QPWGRAPH_CONFIG"
+    nohup qpwgraph -a -m "$QPWGRAPH_CONFIG" > /dev/null 2>&1 &
+    QPWGRAPH_PID=$!
+
+    # Check if qpwgraph started
+    sleep 2
+    if ! kill -0 $QPWGRAPH_PID 2>/dev/null; then
+        echo "ERROR: qpwgraph failed to start"
+        exit 1
+    fi
+else
+    echo "qpwgraph is already running"
+fi
+
+sleep 1
+
 # Start Carla if not already running
 if ! is_running "carla.*main-${HOSTNAME}.carxp"; then
     echo "Starting Carla with config: $CARLA_CONFIG"
@@ -61,22 +79,6 @@ if ! is_running "carla.*main-${HOSTNAME}.carxp"; then
     fi
 else
     echo "Carla is already running"
-fi
-
-# Start qpwgraph if not already running
-if ! is_running "qpwgraph"; then
-    echo "Starting qpwgraph with config: $QPWGRAPH_CONFIG"
-    nohup qpwgraph -a -m "$QPWGRAPH_CONFIG" > /dev/null 2>&1 &
-    QPWGRAPH_PID=$!
-
-    # Check if qpwgraph started
-    sleep 2
-    if ! kill -0 $QPWGRAPH_PID 2>/dev/null; then
-        echo "ERROR: qpwgraph failed to start"
-        exit 1
-    fi
-else
-    echo "qpwgraph is already running"
 fi
 
 echo "Audio graph setup completed successfully"

@@ -1,0 +1,29 @@
+#!/bin/bash
+export WINEPREFIX="$HOME/.altirra/wine"
+
+# First-run prefix init
+if [ ! -d "$WINEPREFIX" ] ; then
+  mkdir -p "$WINEPREFIX"
+  wineboot -u
+fi
+
+# Prefer Vulkan/DXVK over wined3d (OpenGL)
+export WINEDLLOVERRIDES="dxgi=n;d3d11=n;d3d9=n"
+
+# Make sure Wine doesn’t try the Wayland driver
+export WINE_WAYLAND_DRIVER_DISABLE=1
+
+# Nicer behavior on NVIDIA under XWayland
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+
+# (Optional) keep DXVK state cache inside the prefix
+export DXVK_STATE_CACHE_PATH="$WINEPREFIX/dxvk-cache"
+
+# (Optional) set to "info" once to verify DXVK is in use
+export DXVK_LOG_LEVEL=info
+export DXVK_LOG_PATH=stdout
+export DXVK_HUD=devinfo,fps
+
+
+WINEDEBUG=-all exec wine /opt/altirra/Altirra64.exe "$@"
+

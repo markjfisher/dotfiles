@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Launch Alacritty with a font size chosen by current workspace (odd vs even)
+
+BIG=17.0     # font size for odd workspaces (1,3,5,7,9)
+SMALL=11.0   # font size for even workspaces
+
+# Read the active workspace id from Hyprland (JSON)
+WS=$(hyprctl activeworkspace -j | jq '.id')
+WS=${WS:-1}  # default to 1 if somehow empty
+
+if [ $((WS % 2)) -eq 1 ]; then
+  SIZE="$BIG"
+  CLASS="AlacrittyBig"
+else
+  SIZE="$SMALL"
+  CLASS="Alacritty"
+fi
+
+# --class sets the app_id on Wayland; -o overrides config keys at launch
+exec alacritty --class "$CLASS" -o font.size="$SIZE" "$@"
+

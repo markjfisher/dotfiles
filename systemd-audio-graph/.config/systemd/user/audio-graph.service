@@ -5,11 +5,11 @@ PartOf=graphical-session.target
 
 [Service]
 Type=simple
-User=markf
+#User=markf
 Environment=DISPLAY=:0
 Environment=WAYLAND_DISPLAY=wayland-1
 Environment=XDG_RUNTIME_DIR=/run/user/1000
-SupplementaryGroups=audio video input
+#SupplementaryGroups=audio video input
 ExecStart=/home/markf/.local/bin/start-audio-graph.sh
 ExecStop=/home/markf/.local/bin/stop-audio-graph.sh
 Restart=on-failure

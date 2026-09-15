@@ -1,8 +1,12 @@
 #!/bin/bash
 
-alias ll="ls -laF"
+alias ll="ls -la"
+alias lls="ll -snew"
+alias lts="lt -snew"
 alias vi="nvim"
 alias clear-kitty="printf '\033[2J\033[3J\033[1;1H'"
+
+alias as_root="sudo /bin/env WAYLAND_DISPLAY="$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" XDG_RUNTIME_DIR=/user/run/0"
 
 pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
@@ -28,12 +32,61 @@ fi
 pathadd "$HOME/.cargo/bin"
 pathadd "$HOME/.local/bin"
 
+#####################################################
 # 8 bit setup
 
 # on arch we have a system script to run via wine
-export ALTIRRA_BIN=altirra
+export ALTIRRA_BIN=AltirraSDL
 export ATARI800_HOME=/home/markf/dev/atari/atari800/src
-export VENV_ROOT=~/.platformio/penv/.espidf-5.4.0
+
+export ATARI_OS_ROMS=$HOME/8bit/atari/images/os
+export ATARI_BASIC_ROMS=$HOME/8bit/atari/images/atari-basic
+
+# for build.sh in fujinet-nio
+export PIO_VENV_ROOT=~/.platformio/penv/.espidf-5.4.0
+# this is for old firmware
+export PLATFORMIO_CORE_DIR=$PIO_VENV_ROOT
+
+
+## ORCA/GoldenGate for apple2gs compilation
+#export GOLDEN_GATE=$HOME/8bin/GoldenGate
+#pathadd "$GOLDEN_GATE/bin"
+
+# z88dk changes
+#export ZCCCFG=/usr/share/z88dk/lib/config
+
+# Cate paths
+CATE65_PATH=/home/markf/dev/cate/Cate/Cate65/bin/Release/net8.0/
+ASM65_PATH=/home/markf/dev/cate/asm8/Asm65/bin/Release/net8.0/
+LINKLE_PATH=/home/markf/dev/cate/asm8/LinkLE/bin/Release/net8.0/
+
+# pathadd_end "$CATE65_PATH"
+# pathadd_end "$ASM65_PATH"
+# pathadd_end "$LINKLE_PATH"
+
+export CC65_SRC=/home/markf/dev/nio/fujinet-nio-workspace/repos/cc65
+export CC65_HOME=$CC65_SRC
+
+#export FUJINET_TOOLS=$HOME/dev/nio/repos/fujinet-nio/py/fujinet_tools
+#export FUJINET_NIO_HOME=$HOME/dev/nio/repos/fujinet-nio
+#export FUJINET_NIO_LIB=$HOME/dev/nio/repos/fujinet-nio-lib
+#export FUJINET_BIN=$HOME/dev/nio/repos/fujinet-nio/build/fujibus-tcp-debug/fujinet-nio
+
+#export FUJINET_MSDOS=$HOME/dev/msdos/fujinet-msdos
+#export NIO_APPS_MSDOS=$HOME/dev/nio/repos/nio-apps/msdos/
+
+export BEEBIUM_HOME=$HOME/dev/bbc/beebium
+export BEEBIUM_SERVER=$BEEBIUM_HOME/build-release/src/server/beebium-model-b
+export BEEBIUM_ROM_DIR=$BEEBIUM_HOME/roms
+export BEEBIUM_MOS=$BEEBIUM_ROM_DIR/acorn-mos_1_20.rom
+export BEEBIUM_BASIC=$BEEBIUM_ROM_DIR/bbc-basic_2.rom
+
+export FN_ROM_HOME=$HOME/dev/nio/fujinet-nio-workspace/repos/fn-rom
+
+# DOSSY FTP SERVER SETTINGS - Pentium MMX machine
+export DOS_FTP_HOST=MSDOS622.home
+export DOS_FTP_USER=root
+export DOS_FTP_PASS=markf@archy.home
 
 ## watcom for msdos fujinet-lib
 export WATCOM=/opt/watcom
@@ -41,21 +94,28 @@ pathadd_end "$WATCOM/binl64"
 pathadd_end "$WATCOM/binl"
 export EDPATH=$WATCOM/eddat
 export INCLUDE=$WATCOM/h
-
-## ORCA/GoldenGate for apple2gs compilation
-export GOLDEN_GATE=$HOME/8bin/GoldenGate
-pathadd "$GOLDEN_GATE/bin"
+####################################################
 
 # cursor hack
 [[ "$TERM_PROGRAM" == "vscode" ]] && unset ARGV0
 
-# starship terminal prompt
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init bash)"
-
 # Gaming suggestions from Cursor
 #export __GL_SHADER_DISK_CACHE=1
 #export __GL_THREADED_OPTIMIZATIONS=1
+
+mountusb() {
+  dev="/dev/$1"
+  udisksctl mount -b "$dev"
+}
+
+umountusb() {
+  dev="/dev/$1"
+  udisksctl unmount -b "$dev"
+  #udisksctl power-off -b "${dev%[0-9]}"
+}
+
+# NVM init for node work stuff
+source /usr/share/nvm/init-nvm.sh >/dev/null 2>&1
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
